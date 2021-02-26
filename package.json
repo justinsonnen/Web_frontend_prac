@@ -4,10 +4,10 @@
   "description": "Building a front end to incorperate into an exisiting site.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:client": "node app.js",
-    "compile:sass": "node-sass sass/main.scss public/css/styles.css",
-    "start": "npm run dev:client && npm run compile:sass"
+    //"test": "echo \"Error: no test specified\" && exit 1",
+    //"dev:client": "node app.js",
+    "compile:sass": "node-sass sass/main.scss public/css/styles.css -w",
+    //"start": "npm run dev:client && npm run compile:sass"
   },
   "repository": {
     "type": "git",
