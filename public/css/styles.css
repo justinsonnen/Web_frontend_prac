@@ -14,3 +14,19 @@ html {
 body {
   box-sizing: border-box;
   padding: 3rem; }
+
+/* viewport height, and header background image definitons*/
+.header {
+  height: 95vh;
+  background-image: url(/public/images/cabin_header-lg.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(50% 0%, 100% 5%, 100% 95%, 50% 100%, 50% 100%, 0 95%, 0 5%);
+  clip-path: polygon(50% 0%, 100% 5%, 100% 95%, 50% 100%, 50% 100%, 0 95%, 0 5%); }
+  .header__logo-box {
+    position: absolute;
+    top: 5rem;
+    left: 3rem; }
+  .header__logo {
+    height: 7rem; }
