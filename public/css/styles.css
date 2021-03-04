@@ -1,3 +1,49 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem) rotate(6deg); }
+  75% {
+    transform: translateX(0.2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInLeft-accent {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem) rotate(12deg); }
+  75% {
+    transform: translateX(0.2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(6deg); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem) rotate(6deg); }
+  75% {
+    transform: translateX(-0.2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes scaleUpFromNothing {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 /* Universal selector, start with no margin or padding
 change box model to remove any padding or borders */
 *,
@@ -15,6 +61,46 @@ body {
   box-sizing: border-box;
   padding: 3rem; }
 
+.heading-primary {
+  color: #28527a;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'min-reg-ital', sans-serif;
+    font-size: 7rem;
+    letter-spacing: 1rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    font-family: "min-glyph";
+    display: block;
+    font-size: 2.5rem;
+    letter-spacing: 5rem;
+    margin-left: 3.5rem;
+    margin-top: 1rem;
+    animation-delay: 1s;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards; }
+  .heading-primary--accent {
+    font-family: "baheula", cursive;
+    color: #fde8cd;
+    display: block;
+    font-size: 6rem;
+    position: absolute;
+    top: -4.5rem;
+    left: -3rem;
+    transform: rotate(-10deg);
+    animation-delay: 1.5s;
+    animation-name: moveInLeft-accent;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards; }
+
 /* viewport height, and header background image definitons*/
 .header {
   height: 95vh;
@@ -29,4 +115,12 @@ body {
     top: 5rem;
     left: 3rem; }
   .header__logo {
-    height: 7rem; }
+    height: 7rem;
+    animation: scaleUpFromNothing 2s ease-out 2s;
+    animation-fill-mode: backwards; }
+  .header__text-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }

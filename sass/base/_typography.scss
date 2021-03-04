@@ -1,0 +1,64 @@
+body {
+    // font-family: "Lato", sans-serif;
+    // line-height: 1.7;
+    // color: $color-grey-dark;
+}
+
+.heading-primary {
+    color: $color-primary-blue-dark;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+
+    &--main {
+        display: block;
+        text-transform: uppercase;
+        font-family: 'min-reg-ital', sans-serif;
+        font-size: 7rem;
+        letter-spacing: 1rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+
+
+        // @include respond(phone) {
+        //     letter-spacing: 1rem;
+        //     font-size: 5rem;
+        // }
+    }
+    
+    &--sub {
+        font-family: "min-glyph";
+        display: block;
+        font-size: 2.5rem;
+        letter-spacing: 5rem;
+        margin-left: 3.5rem;
+        margin-top: 1rem;
+
+        animation-delay: 1s;
+        animation-name: moveInRight;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: backwards;
+    }
+
+    &--accent {
+        font-family: "baheula", cursive;
+        color: $color-primary-cream-light;
+        display: block;
+        font-size: 6rem;
+        position: absolute;
+        top: -4.5rem;
+        left:-3rem;
+        transform:rotate(-10deg);
+
+        animation-delay: 1.5s;
+        animation-name: moveInLeft-accent;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: backwards;
+        
+
+    }
+}
