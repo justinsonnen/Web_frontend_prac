@@ -1,0 +1,40 @@
+
+// neomorphic text-box
+.textbox {
+        padding: 3rem;
+        color: $color-grey-dark-3;
+        border-radius: 30px;
+        background-color: #dde1e7;
+        box-shadow: -3px -3px 7px $color-white, 3px 3px 5px rgba($color-neumorphism-box, 0.712);
+        
+
+        
+        &--about {
+            position: absolute; 
+            height: 51rem;
+            width: 55rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -35%);
+        }
+
+        &--gallery {
+            height: 100%;
+            transform: translateY(20%);
+        }
+
+        &--contact_us {
+            height: 80rem;
+            width: 110rem;
+            background-image: linear-gradient(to right bottom,  rgba($color-primary-cream-light, .9), 
+            rgba($color-primary-blue-light-1, .9)),
+            url(/public/images/cabin_header-med.jpg);
+            background-size: cover;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+    
+
+}

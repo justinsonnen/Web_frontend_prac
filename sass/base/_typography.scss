@@ -1,15 +1,10 @@
-body {
-    // font-family: "Lato", sans-serif;
-    // line-height: 1.7;
-     color: $color-grey-dark-2;
-}
-
+// Header typography definitions
 .heading-primary {
     color: $color-primary-blue-dark;
     backface-visibility: hidden;
     margin-bottom: 6rem;
 
-
+    // Page title
     &--main {
         display: block;
         text-transform: uppercase;
@@ -18,7 +13,7 @@ body {
         letter-spacing: 1rem;
     
         animation-name: moveInDown;
-        animation-duration: 2.5s;
+        animation-duration: 1s;
         animation-timing-function: ease-out;
 
 
@@ -28,6 +23,7 @@ body {
         // }
     }
     
+    // Page title support phrase
     &--sub {
         font-family: "min-glyph";
         display: block;
@@ -36,13 +32,14 @@ body {
         margin-left: 3.5rem;
         margin-top: 1rem;
 
-        animation-delay: 1s;
+        animation-delay: .5s;
         animation-name: moveInRight;
-        animation-duration: 2s;
+        animation-duration: 1s;
         animation-timing-function: ease-out;
         animation-fill-mode: backwards;
     }
 
+    // Accent "come visit" 
     &--accent {
         font-family: "baheula", cursive;
         color: $color-primary-cream-light;
@@ -53,39 +50,50 @@ body {
         left:-3rem;
         transform:rotate(-10deg);
 
-        animation-delay: 1.5s;
+        animation-delay: 1s;
         animation-name: moveInLeft-accent;
-        animation-duration: 2s;
+        animation-duration: 1.5s;
         animation-timing-function: ease-out;
         animation-fill-mode: backwards;
     }
 }
 
+// Section headings
 .heading-secondary{
-    
-font-family: "min-glyph";
-font-size: 6rem;
+padding: 15px 50px;
+font-family: "min-reg-ital";
+font-size: 4.5rem;
 display: inline-block;
-text-transform: uppercase;
-background-image: linear-gradient(to right,  $color-primary-green-dark, $color-primary-blue-dark);
+background-image: linear-gradient(to right,  $color-primary-blue-dark, $color-grey-dark-1);
 -webkit-background-clip: text;
 background-clip: text;
 color: transparent;
-letter-spacing: .2rem;
+letter-spacing: .4rem;
 transition: all .2s ease-out;
 
 
 
 &:hover {
     transform: translateY(-3.2px) scale(1.01);
-    text-shadow: 0rem 0.5rem 1rem rgba($color-primary-green-dark, .25);
+    text-shadow: 0rem 0.5rem 1rem rgba($color-black, .25);
  }
 }
 
+// Text box primary headings
 .heading-tertiary {
-    font-size: 2rem;
-    font-family: 'min-reg-ital', sans-serif;
+    font-size: 2.4rem;
+    font-family: 'min-glyph', sans-serif;
+    letter-spacing: .3rem;
+    color: $color-primary-blue-dark;
     
+    &--gallery {
+        margin-top: 20px;
+        font-family: 'min-glyph', sans-serif;
+        font-size: 3.5rem;
+        letter-spacing: 1.2rem;
+        text-align: center;
+        color: $color-primary-green-light;
+    }
 
     // @include respond (phone) {
     //     padding-top: 10px;
@@ -93,8 +101,10 @@ transition: all .2s ease-out;
     // }
 }
 
+// Text box text
 .paragraph {
     font-size: $default-font-size;
+    color: $color-grey-dark-1;
     text-transform: lowercase;
     font-family: "min-reg";
     line-height: 1.8;

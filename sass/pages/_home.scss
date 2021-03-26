@@ -11,3 +11,39 @@
     // }
 }
 
+.section-gallery {
+    height: 160vh;
+    position: relative;
+
+    img {
+        border-radius: 30px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        transition: all .2s ease-in-out;
+        width: 55rem;
+        object-fit: cover;
+
+        &:hover {
+            transform: scale(1.15) translateY(-5px);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+        }
+    }
+
+}
+
+
+.section-contact_us {
+    padding: 15rem 0;
+    margin-top: 5rem;
+    position: relative;
+    height: 90vh;
+}
+
+// .contact_us {
+//     // background-image: url(/public/images/campfire_contact_us.jpg);
+//     // background-size:auto;
+//     // border-radius: 3px;
+//     // box-shadow: 0 1.5 4 rem rgba($color-black, .2);
+
+//     // height: 50rem;
+// }
+
