@@ -11,31 +11,176 @@
     // }
 }
 
-.section-gallery {
-    height: 160vh;
+.section-tiles {
+    height: 75vh;
     position: relative;
 
     img {
         border-radius: 30px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-        transition: all .2s ease-in-out;
-        width: 55rem;
+        transition: all .4s ease-in-out;
+        width: 50rem;
         object-fit: cover;
+        
+
 
         &:hover {
-            transform: scale(1.15) translateY(-5px);
+            transform: scale(1.21) translateY(-5px);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+            
+        }
+
+    }
+
+    .tiles-img:hover + .textbox--tiles {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    // .gallery-img:hover .gallery-img:not(:hover) + .textbox--gallery {
+    //     opacity: 0;
+    // }
+
+
+}
+
+.section-gallery {
+    height: 140vh;
+    background-image: linear-gradient(to bottom, transparent, rgba($color-black, .8));
+    -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%);
+    clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%);
+
+    .gallery_grid_layout {
+        padding: 0 10%;
+        margin: 0 20rem;
+        display: grid;
+        height: 90rem;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 20px;
+        
+    }
+
+    .grid_layout-item {
+       
+        color: $color-primary-cream-light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        
+
+        &.square {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+
+        &.large-square {
+            grid-row: span 3;
+            grid-column: span 3;
+        }
+
+        &.tall {
+            grid-row: span 3;
+            grid-column: span 2;
+        }
+
+        &.wide {
+            grid-row: span 2;
+            grid-column: span 3;
+        }
+    }
+    .one {
+        background-image: url(/public/images/grid3-lg.jpg);
+        background-size: cover;
+        background-color: rgba($color-black, .3);
+        background-blend-mode: multiply;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            transform: scale(1.1) translate(-20px, -10px);
             box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
         }
     }
 
+    .two {
+        background-image: url(/public/images/grid6-lg.jpg);
+        background-size: cover;
+        background-color: rgba($color-black, .3);
+        background-blend-mode: multiply;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            transform: scale(1.1) translate(25px, -15px);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+        }
+        
+    }
+
+    .three {
+        background-image: url(/public/images/grid1-lg.jpg);
+        background-size: cover;
+        background-color: rgba($color-black, .3);
+        background-blend-mode: multiply;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            transform: scale(1.1)  translate(-15px);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+        }
+    }
+
+    .four {
+        background-image: url(/public/images/grid4-med.jpg);
+        background-size: cover;
+        background-color: rgba($color-black, .3);
+        background-blend-mode: multiply;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            transform: scale(1.1);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+        }
+    }
+
+    .five {
+        background-image: url(/public/images/grid5-lg.jpg);
+        background-size: cover;
+        background-color: rgba($color-black, .3);
+        background-blend-mode: multiply;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            transform: scale(1.1) translate(20px, 15px);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+        }
+        
+    }
+
+    .six {
+        background-image: url(/public/images/grid2-lg.jpg);
+        background-size: cover;
+        background-color: rgba($color-black, .3);
+        background-blend-mode: multiply;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            transform: scale(1.1) translate(-20px, 10px);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+        }
+    }
 }
 
 
 .section-contact_us {
-    padding: 15rem 0;
-    margin-top: 5rem;
     position: relative;
-    height: 90vh;
+    height: 80vh;
 }
 
 // .contact_us {

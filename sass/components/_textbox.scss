@@ -18,22 +18,27 @@
             transform: translate(-50%, -35%);
         }
 
-        &--gallery {
-            height: 100%;
-            transform: translateY(20%);
+        &--tiles {
+            height: 1rem;
+            width: 30rem;
+            transform: translateY(-20%);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+            transition:  all .5s ease-in-out;
         }
 
         &--contact_us {
-            height: 80rem;
-            width: 110rem;
-            background-image: linear-gradient(to right bottom,  rgba($color-primary-cream-light, .9), 
-            rgba($color-primary-blue-light-1, .9)),
-            url(/public/images/cabin_header-med.jpg);
+            height: 50rem;
+            width: 100rem;
+            background-image: linear-gradient(to bottom,  rgba($color-white, 1), 
+            rgba($color-white, .7)),
+            url(/public/images/campfire1-med.jpg);
             background-size: cover;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            position: absolute;
+            margin-right: auto;
+            margin-left: auto;
+            // top: 90%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            //position: absolute;
         }
     
 

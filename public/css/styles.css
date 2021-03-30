@@ -112,15 +112,15 @@ body {
     text-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25); }
 
 .heading-tertiary {
-  font-size: 2.4rem;
-  font-family: 'min-glyph', sans-serif;
+  font-size: 2.2rem;
+  font-family: "" min-glyph ", sans-serif";
   letter-spacing: .3rem;
   color: #28527a; }
-  .heading-tertiary--gallery {
-    margin-top: 20px;
-    font-family: 'min-glyph', sans-serif;
-    font-size: 3.5rem;
-    letter-spacing: 1.2rem;
+  .heading-tertiary--tiles {
+    margin-top: -19px;
+    font-family: 'baheula';
+    font-size: 3.4rem;
+    letter-spacing: .5rem;
     text-align: center;
     color: #00917c; }
 
@@ -140,7 +140,7 @@ body {
   margin-bottom: 2rem !important; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem !important; }
+  margin-bottom: 5rem !important; }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
@@ -255,6 +255,11 @@ body {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, rgba(249, 251, 253, 0.2), transparent); }
+  .bg-video--footer {
+    height: 100%;
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 100%);
+    clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%); }
 
 .textbox {
   padding: 3rem;
@@ -269,21 +274,22 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -35%); }
-  .textbox--gallery {
-    height: 100%;
-    transform: translateY(20%); }
+  .textbox--tiles {
+    height: 1rem;
+    width: 30rem;
+    transform: translateY(-20%);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    transition: all .5s ease-in-out; }
   .textbox--contact_us {
-    height: 80rem;
-    width: 110rem;
-    background-image: linear-gradient(to right bottom, rgba(253, 232, 205, 0.9), rgba(138, 196, 208, 0.9)), url(/public/images/cabin_header-med.jpg);
+    height: 50rem;
+    width: 100rem;
+    background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.7)), url(/public/images/campfire1-med.jpg);
     background-size: cover;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute; }
+    margin-right: auto;
+    margin-left: auto; }
 
 .row {
-  max-width: 114rem;
+  max-width: 160rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -333,27 +339,124 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
+.footer {
+  height: 60vh;
+  position: relative; }
+
 .section-about {
   padding: 0;
   margin-top: -5rem;
   position: relative;
   height: 95vh; }
 
-.section-gallery {
-  height: 160vh;
+.section-tiles {
+  height: 75vh;
   position: relative; }
-  .section-gallery img {
+  .section-tiles img {
     border-radius: 30px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    transition: all .2s ease-in-out;
-    width: 55rem;
+    transition: all .4s ease-in-out;
+    width: 50rem;
     object-fit: cover; }
-    .section-gallery img:hover {
-      transform: scale(1.15) translateY(-5px);
+    .section-tiles img:hover {
+      transform: scale(1.21) translateY(-5px);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
+  .section-tiles .tiles-img:hover + .textbox--tiles {
+    opacity: 0;
+    transform: scale(0.5); }
+
+.section-gallery {
+  height: 140vh;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+  -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%);
+  clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%); }
+  .section-gallery .gallery_grid_layout {
+    padding: 0 10%;
+    margin: 0 20rem;
+    display: grid;
+    height: 90rem;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px; }
+  .section-gallery .grid_layout-item {
+    color: #fde8cd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px; }
+    .section-gallery .grid_layout-item.square {
+      grid-row: span 2;
+      grid-column: span 2; }
+    .section-gallery .grid_layout-item.large-square {
+      grid-row: span 3;
+      grid-column: span 3; }
+    .section-gallery .grid_layout-item.tall {
+      grid-row: span 3;
+      grid-column: span 2; }
+    .section-gallery .grid_layout-item.wide {
+      grid-row: span 2;
+      grid-column: span 3; }
+  .section-gallery .one {
+    background-image: url(/public/images/grid3-lg.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    transition: all .3s ease-in-out; }
+    .section-gallery .one:hover {
+      background-color: transparent;
+      transform: scale(1.1) translate(-20px, -10px);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
+  .section-gallery .two {
+    background-image: url(/public/images/grid6-lg.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    transition: all .3s ease-in-out; }
+    .section-gallery .two:hover {
+      background-color: transparent;
+      transform: scale(1.1) translate(25px, -15px);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
+  .section-gallery .three {
+    background-image: url(/public/images/grid1-lg.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    transition: all .3s ease-in-out; }
+    .section-gallery .three:hover {
+      background-color: transparent;
+      transform: scale(1.1) translate(-15px);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
+  .section-gallery .four {
+    background-image: url(/public/images/grid4-med.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    transition: all .3s ease-in-out; }
+    .section-gallery .four:hover {
+      background-color: transparent;
+      transform: scale(1.1);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
+  .section-gallery .five {
+    background-image: url(/public/images/grid5-lg.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    transition: all .3s ease-in-out; }
+    .section-gallery .five:hover {
+      background-color: transparent;
+      transform: scale(1.1) translate(20px, 15px);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
+  .section-gallery .six {
+    background-image: url(/public/images/grid2-lg.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    transition: all .3s ease-in-out; }
+    .section-gallery .six:hover {
+      background-color: transparent;
+      transform: scale(1.1) translate(-20px, 10px);
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
 
 .section-contact_us {
-  padding: 15rem 0;
-  margin-top: 5rem;
   position: relative;
-  height: 90vh; }
+  height: 80vh; }

@@ -81,18 +81,19 @@ transition: all .2s ease-out;
 
 // Text box primary headings
 .heading-tertiary {
-    font-size: 2.4rem;
-    font-family: 'min-glyph', sans-serif;
+    font-size: 2.2rem;
+    font-family: ''min-glyph', sans-serif';
     letter-spacing: .3rem;
     color: $color-primary-blue-dark;
     
-    &--gallery {
-        margin-top: 20px;
-        font-family: 'min-glyph', sans-serif;
-        font-size: 3.5rem;
-        letter-spacing: 1.2rem;
+    &--tiles {
+        margin-top: -19px;
+        font-family: 'baheula';
+        font-size: 3.4rem;
+        letter-spacing: .5rem;
         text-align: center;
         color: $color-primary-green-light;
+        
     }
 
     // @include respond (phone) {
