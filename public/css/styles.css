@@ -163,6 +163,9 @@ body {
 .u-margin-top-biggest {
   margin-top: 16rem !important; }
 
+.u-margin-top-contact_us {
+  margin-top: 28rem !important; }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -185,6 +188,16 @@ body {
   outline: none;
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--contact {
+  font-family: inherit;
+  color: #fde8cd;
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: .5rem;
+  letter-spacing: .5rem;
+  background-color: rgba(138, 196, 208, 0.9); }
 
 .btn::after {
   content: "";
@@ -256,10 +269,21 @@ body {
     height: 100%;
     background-image: linear-gradient(to bottom, rgba(249, 251, 253, 0.2), transparent); }
   .bg-video--footer {
+    position: absolute;
     height: 100%;
     width: 100%;
+    z-index: -1;
     -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 100%);
     clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%); }
+  .bg-video--footer::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent); }
 
 .textbox {
   padding: 3rem;
@@ -283,10 +307,51 @@ body {
   .textbox--contact_us {
     height: 50rem;
     width: 100rem;
-    background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.7)), url(/public/images/campfire1-med.jpg);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), transparent), url(/public/images/contactus-med.jpg);
     background-size: cover;
     margin-right: auto;
     margin-left: auto; }
+    .textbox--contact_us .paragraph {
+      color: rgba(0, 0, 0, 0.6); }
+
+.form__group:not(:last-child) {
+  margin-bottom: 1rem; }
+
+.form__input {
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: .5rem;
+  letter-spacing: .5rem;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 50%;
+  display: block;
+  transition: all .3s; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #8ac4d0; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #CC5500; }
+  .form__input::-webkit-input-placeholder {
+    color: #025955; }
+
+.form__label {
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
 
 .row {
   max-width: 160rem;
@@ -340,8 +405,36 @@ body {
     text-align: center; }
 
 .footer {
-  height: 60vh;
-  position: relative; }
+  height: 40vh;
+  position: relative;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.4rem; }
+  .footer__navigation {
+    border-top: 1px solid #fff;
+    padding-top: 1.1rem;
+    display: inline-block;
+    top: 1rem;
+    z-index: 100; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #fff;
+    box-shadow: 0 1em 2rem rgba(0, 0, 0, 0.4);
+    transform: scale(1.1) translateY(-1px); }
+  .footer__copyright {
+    border-top: 1px solid #fff;
+    padding-top: 1.1rem;
+    width: 60%;
+    float: right; }
 
 .section-about {
   padding: 0;
@@ -367,7 +460,7 @@ body {
 
 .section-gallery {
   height: 140vh;
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+  background-image: linear-gradient(to bottom, #f7f7f7, rgba(40, 82, 122, 0.5));
   -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%);
   clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%); }
   .section-gallery .gallery_grid_layout {
@@ -399,7 +492,7 @@ body {
   .section-gallery .one {
     background-image: url(/public/images/grid3-lg.jpg);
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(204, 85, 0, 0.9);
     background-blend-mode: multiply;
     transition: all .3s ease-in-out; }
     .section-gallery .one:hover {
@@ -409,7 +502,7 @@ body {
   .section-gallery .two {
     background-image: url(/public/images/grid6-lg.jpg);
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #29bb89;
     background-blend-mode: multiply;
     transition: all .3s ease-in-out; }
     .section-gallery .two:hover {
@@ -419,7 +512,7 @@ body {
   .section-gallery .three {
     background-image: url(/public/images/grid1-lg.jpg);
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #f7ea00;
     background-blend-mode: multiply;
     transition: all .3s ease-in-out; }
     .section-gallery .three:hover {
@@ -429,7 +522,7 @@ body {
   .section-gallery .four {
     background-image: url(/public/images/grid4-med.jpg);
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(33, 32, 156, 0.6);
     background-blend-mode: multiply;
     transition: all .3s ease-in-out; }
     .section-gallery .four:hover {
@@ -439,7 +532,7 @@ body {
   .section-gallery .five {
     background-image: url(/public/images/grid5-lg.jpg);
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(199, 0, 57, 0.6);
     background-blend-mode: multiply;
     transition: all .3s ease-in-out; }
     .section-gallery .five:hover {
@@ -449,7 +542,7 @@ body {
   .section-gallery .six {
     background-image: url(/public/images/grid2-lg.jpg);
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(67, 53, 32, 0.7);
     background-blend-mode: multiply;
     transition: all .3s ease-in-out; }
     .section-gallery .six:hover {

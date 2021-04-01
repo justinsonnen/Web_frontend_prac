@@ -29,16 +29,16 @@
         &--contact_us {
             height: 50rem;
             width: 100rem;
-            background-image: linear-gradient(to bottom,  rgba($color-white, 1), 
-            rgba($color-white, .7)),
-            url(/public/images/campfire1-med.jpg);
+            background-image: linear-gradient(to bottom,  rgba($color-white, .6), 
+            transparent),
+            url(/public/images/contactus-med.jpg);
             background-size: cover;
             margin-right: auto;
             margin-left: auto;
-            // top: 90%;
-            // left: 50%;
-            // transform: translate(-50%, -50%);
-            //position: absolute;
+
+            & .paragraph {
+                color: rgba($color-black, .6);
+            }
         }
     
 

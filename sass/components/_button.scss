@@ -49,6 +49,17 @@
     //     }
     // }
 
+        &--contact {
+            font-family: inherit;
+            color: $color-primary-cream-light;
+            font-size: 2rem;
+            padding-left: 2rem;
+            padding-top: 2rem;
+            padding-bottom: .5rem;
+            letter-spacing: .5rem;
+            background-color: rgba($color-primary-blue-light-1, .9);
+        }
+
     &::after {
         content: "";
         display: inline-block;
