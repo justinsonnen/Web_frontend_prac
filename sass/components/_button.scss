@@ -91,6 +91,28 @@
         padding: 3px;
         transition: all .2s ease-out;
         backface-visibility: hidden;
+
+                // media queries for responsive layout
+                @include respond(desktop-2) {
+                    font-size: 2.5rem;
+                }
+            
+                @include respond(desktop-1) {
+                    font-size: 3.2rem;
+                }
+            
+                @include respond(tab-land) {
+                    padding-top: 3rem;
+                    font-size: 4rem;
+                }
+            
+                @include respond(tab-port) {
+                    font-size: 4.5rem;
+                }
+            
+                @include respond(mobile-port) {
+                    font-size: 6rem;
+                }
     }
 
     &:hover {

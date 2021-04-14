@@ -1,3 +1,27 @@
+/*
+
+0       -  575px:  mobile-port
+575px   -  767px:  mobile-land
+767px   -  900px:  tab-port
+900px   - 1200px:  tab-land
+1200px  - 1800px:  desktop-1
+1800px  - 2000px:  desktop-2
+2400px+         :  desktop-3
+*/
+/*
+$breakpoint arguement options:
+- mobile-port
+- mobile-tab
+- tab-port
+- tab-land
+- desktop-1
+- desktop-2
+- desktop-3
+
+1em = 16px
+
+ORDER: base + typogrophy > general layout + grid > page layout > components 
+*/
 @keyframes moveInDown {
   0% {
     opacity: 0;
@@ -46,7 +70,245 @@ change box model to remove any padding or borders */
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+  @media (max-width: 150em) {
+    html {
+      font-size: 62.5%; } }
+  @media (max-width: 112.5em) {
+    html {
+      font-size: 43%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 32%; } }
+  @media (max-width: 56.3em) {
+    html {
+      font-size: 25%; } }
+  @media (max-width: 48em) {
+    html {
+      font-size: 20%; } }
+  @media (max-width: 36em) {
+    html {
+      font-size: 17%; } }
+  @media (min-width: 150em) {
+    html {
+      font-size: 85.5%; } }
 
 /* Add project-wide font definitions to be inherited*/
 body {
@@ -54,12 +316,47 @@ body {
   padding: 3rem;
   background-color: #dde1ef;
   font-family: "min-reg";
-  color: #999; }
+  color: #999;
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+  @media (max-width: 56.3em) {
+    body {
+      padding: 0; } }
 
 .heading-primary {
   color: #28527a;
   backface-visibility: hidden;
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+  white-space: nowrap; }
   .heading-primary--main {
     display: block;
     text-transform: uppercase;
@@ -68,7 +365,180 @@ body {
     letter-spacing: 1rem;
     animation-name: moveInDown;
     animation-duration: 1s;
-    animation-timing-function: ease-out; }
+    animation-timing-function: ease-out;
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+    @media (max-width: 112.5em) {
+      .heading-primary--main {
+        font-size: 8rem;
+        letter-spacing: .9rem; } }
+    @media (max-width: 75em) {
+      .heading-primary--main {
+        font-size: 9rem;
+        letter-spacing: .9rem; } }
+    @media (max-width: 56.3em) {
+      .heading-primary--main {
+        font-size: 11rem;
+        letter-spacing: .8rem; } }
+    @media (max-width: 48em) {
+      .heading-primary--main {
+        font-size: 12rem; } }
+    @media (max-width: 36em) {
+      .heading-primary--main {
+        font-size: 11rem; } }
   .heading-primary--sub {
     font-family: "min-glyph";
     display: block;
@@ -80,7 +550,184 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    animation-fill-mode: backwards; }
+    animation-fill-mode: backwards;
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+    @media (max-width: 112.5em) {
+      .heading-primary--sub {
+        font-size: 3.5rem;
+        margin-top: 2.5rem; } }
+    @media (max-width: 75em) {
+      .heading-primary--sub {
+        font-size: 4rem;
+        letter-spacing: 5.5rem; } }
+    @media (max-width: 56.3em) {
+      .heading-primary--sub {
+        font-size: 5rem;
+        letter-spacing: 6.2rem; } }
+    @media (max-width: 48em) {
+      .heading-primary--sub {
+        font-size: 6rem;
+        letter-spacing: 6.3rem;
+        margin-top: 3rem; } }
+    @media (max-width: 36em) {
+      .heading-primary--sub {
+        font-size: 5rem;
+        letter-spacing: 6rem;
+        margin-top: 4rem; } }
   .heading-primary--accent {
     font-family: "baheula", cursive;
     color: #fde8cd;
@@ -94,7 +741,185 @@ body {
     animation-name: moveInLeft-accent;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
-    animation-fill-mode: backwards; }
+    animation-fill-mode: backwards;
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+    @media (max-width: 112.5em) {
+      .heading-primary--accent {
+        font-size: 8.5rem;
+        top: -7rem;
+        left: -7rem; } }
+    @media (max-width: 75em) {
+      .heading-primary--accent {
+        color: #CC5500;
+        font-size: 8rem;
+        top: -7rem;
+        left: -7rem; } }
+    @media (max-width: 56.3em) {
+      .heading-primary--accent {
+        font-size: 8.5rem;
+        left: -8rem; } }
+    @media (max-width: 48em) {
+      .heading-primary--accent {
+        font-size: 9rem;
+        top: -8rem;
+        left: -9.5rem; } }
+    @media (max-width: 36em) {
+      .heading-primary--accent {
+        left: -8rem; } }
 
 .heading-secondary {
   padding: 15px 50px;
@@ -106,7 +931,219 @@ body {
   background-clip: text;
   color: transparent;
   letter-spacing: .4rem;
-  transition: all .2s ease-out; }
+  transition: all .2s ease-out;
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+  @media (max-width: 150em) {
+    .heading-secondary {
+      font-size: 6rem;
+      padding-top: 3rem; } }
+  @media (max-width: 112.5em) {
+    .heading-secondary {
+      font-size: 8rem;
+      padding-top: 6rem; } }
+  @media (max-width: 75em) {
+    .heading-secondary {
+      font-size: 8.5rem;
+      padding-top: 15rem;
+      letter-spacing: .2rem;
+      white-space: nowrap; } }
+  @media (max-width: 56.3em) {
+    .heading-secondary {
+      padding-top: 25rem; } }
+  @media (max-width: 48em) {
+    .heading-secondary {
+      padding-top: 40rem;
+      font-size: 10rem;
+      white-space: unset; } }
+  @media (max-width: 36em) {
+    .heading-secondary {
+      padding-top: 50rem;
+      font-size: 10rem; } }
   .heading-secondary:hover {
     transform: translateY(-3.2px) scale(1.01);
     text-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25); }
@@ -115,7 +1152,247 @@ body {
   font-size: 2.2rem;
   font-family: "" min-glyph ", sans-serif";
   letter-spacing: .3rem;
-  color: #28527a; }
+  color: #28527a;
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+  @media (max-width: 150em) {
+    .heading-tertiary {
+      font-size: 2.8rem; } }
+  @media (max-width: 112.5em) {
+    .heading-tertiary {
+      font-size: 4rem; } }
+  @media (max-width: 75em) {
+    .heading-tertiary {
+      padding-top: 3rem;
+      font-size: 4.2rem; } }
+  @media (max-width: 56.3em) {
+    .heading-tertiary {
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+      font-size: 5.4rem; } }
+  @media (max-width: 48em) {
+    .heading-tertiary {
+      padding-top: 5rem;
+      font-size: 5.9rem; } }
+  @media (max-width: 36em) {
+    .heading-tertiary {
+      padding-top: 6rem;
+      font-size: 6.2rem; } }
   .heading-tertiary--tiles {
     margin-top: -19px;
     font-family: 'baheula';
@@ -129,9 +1406,214 @@ body {
   color: #777;
   text-transform: lowercase;
   font-family: "min-reg";
-  line-height: 1.8; }
+  line-height: 1.8;
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
   .paragraph:not(:last-child) {
     margin-bottom: 2.5rem; }
+  @media (max-width: 150em) {
+    .paragraph {
+      font-size: 2rem; } }
+  @media (max-width: 112.5em) {
+    .paragraph {
+      font-size: 2.7rem; } }
+  @media (max-width: 75em) {
+    .paragraph {
+      font-size: 3.3rem; } }
+  @media (max-width: 56.3em) {
+    .paragraph {
+      font-size: 4rem;
+      line-height: 2; } }
+  @media (max-width: 48em) {
+    .paragraph {
+      font-size: 4.2rem; } }
+  @media (max-width: 36em) {
+    .paragraph {
+      font-size: 4.6rem; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -223,7 +1705,178 @@ body {
   text-decoration: none;
   padding: 3px;
   transition: all .2s ease-out;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+  @media (max-width: 150em) {
+    .btn-text:link, .btn-text:visited {
+      font-size: 2.5rem; } }
+  @media (max-width: 112.5em) {
+    .btn-text:link, .btn-text:visited {
+      font-size: 3.2rem; } }
+  @media (max-width: 75em) {
+    .btn-text:link, .btn-text:visited {
+      padding-top: 3rem;
+      font-size: 4rem; } }
+  @media (max-width: 56.3em) {
+    .btn-text:link, .btn-text:visited {
+      font-size: 4.5rem; } }
+  @media (max-width: 36em) {
+    .btn-text:link, .btn-text:visited {
+      font-size: 6rem; } }
 
 .btn-text:hover {
   background-color: #00917c;
@@ -259,15 +1912,6 @@ body {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, rgba(249, 251, 253, 0.8), transparent); }
-  .bg-video--contact_us::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, rgba(249, 251, 253, 0.2), transparent); }
   .bg-video--footer {
     position: absolute;
     height: 100%;
@@ -297,7 +1941,250 @@ body {
     width: 55rem;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -35%); }
+    transform: translate(-50%, -35%);
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+    @media (max-width: 150em) {
+      .textbox--about {
+        height: 61rem;
+        width: 65rem; } }
+    @media (max-width: 112.5em) {
+      .textbox--about {
+        height: 80rem;
+        width: 90rem;
+        top: 45%; } }
+    @media (max-width: 75em) {
+      .textbox--about {
+        height: 115rem;
+        width: 90rem;
+        top: 45%; } }
+    @media (max-width: 56.3em) {
+      .textbox--about {
+        height: 175rem;
+        width: 90rem; } }
+    @media (max-width: 48em) {
+      .textbox--about {
+        height: 190rem;
+        top: 50%; } }
+    @media (max-width: 36em) {
+      .textbox--about {
+        height: 220rem;
+        top: 47%; } }
   .textbox--tiles {
     height: 1rem;
     width: 30rem;
@@ -355,9 +2242,80 @@ body {
 
 .row {
   max-width: 160rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+  @media (max-width: 112.5em) {
+    .row {
+      padding-top: 9rem;
+      max-width: 200rem; } }
+  @media (max-width: 75em) {
+    .row {
+      padding: 0;
+      max-width: 100rem;
+      position: relative; } }
   .row::after {
     content: "";
     display: table;
@@ -369,7 +2327,41 @@ body {
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - (2 * 6rem)) / 3); }
+    width: calc((100% - (2 * 6rem)) / 3);
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+    @media (max-width: 75em) {
+      .row .col-1-of-3 {
+        width: 100%; } }
   .row .col-2-of-3 {
     width: calc(2 * ((100% - (2 * 6rem)) / 3) + 6rem); }
   .row .col-1-of-4 {
@@ -392,11 +2384,424 @@ body {
   .header__logo-box {
     position: absolute;
     top: 5rem;
-    left: 3rem; }
+    left: 3rem;
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+    @media (max-width: 150em) {
+      .header__logo-box {
+        top: 7rem; } }
+    @media (max-width: 112.5em) {
+      .header__logo-box {
+        top: 10rem;
+        left: 4rem; } }
+    @media (max-width: 75em) {
+      .header__logo-box {
+        top: 13rem;
+        left: 5rem; } }
+    @media (max-width: 56.3em) {
+      .header__logo-box {
+        top: 15rem;
+        left: 5rem; } }
+    @media (max-width: 48em) {
+      .header__logo-box {
+        top: 19rem;
+        left: 7rem; } }
+    @media (max-width: 36em) {
+      .header__logo-box {
+        top: 23rem;
+        left: 8rem; } }
   .header__logo {
     height: 7rem;
     animation: scaleUpFromNothing 1s ease-out 1s;
-    animation-fill-mode: backwards; }
+    animation-fill-mode: backwards;
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+    @media (max-width: 150em) {
+      .header__logo {
+        height: 9rem; } }
+    @media (max-width: 112.5em) {
+      .header__logo {
+        height: 10rem; } }
+    @media (max-width: 75em) {
+      .header__logo {
+        height: 14rem; } }
+    @media (max-width: 56.3em) {
+      .header__logo {
+        height: 17rem; } }
+    @media (max-width: 48em) {
+      .header__logo {
+        height: 22rem; } }
+    @media (max-width: 36em) {
+      .header__logo {
+        height: 24rem; } }
   .header__title-text-box {
     position: absolute;
     top: 30%;
@@ -444,13 +2849,327 @@ body {
 
 .section-tiles {
   height: 75vh;
-  position: relative; }
+  position: relative;
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+  /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+  @media (max-width: 150em) {
+    .section-tiles {
+      height: 60vh; } }
+  @media (max-width: 112.5em) {
+    .section-tiles {
+      height: 70vh; } }
+  @media (max-width: 75em) {
+    .section-tiles {
+      height: 92vh;
+      transform: translate(0, -6%); } }
+  @media (max-width: 56.3em) {
+    .section-tiles {
+      height: 72vh;
+      transform: translate(0, -7%); } }
   .section-tiles img {
     border-radius: 30px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     transition: all .4s ease-in-out;
     width: 50rem;
-    object-fit: cover; }
+    object-fit: cover;
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */
+    /*
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+            
+    }
+
+    @include respond(desktop-2) {
+        
+    }
+
+    @include respond(desktop-1) {
+        
+    }
+
+    @include respond(tab-land) {
+        
+    }
+
+    @include respond(tab-port) {
+        
+    }
+
+    @include respond(mobile-land) {
+        
+    }
+
+    @include respond(mobile-port) {
+       
+    }
+
+    */ }
+    @media (max-width: 112.5em) {
+      .section-tiles img {
+        width: 53rem; } }
+    @media (max-width: 75em) {
+      .section-tiles img {
+        width: 73rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; } }
+    @media (max-width: 56.3em) {
+      .section-tiles img {
+        margin-bottom: 3rem; } }
+    @media (max-width: 48em) {
+      .section-tiles img {
+        width: 83rem;
+        margin-bottom: 5rem; } }
+    @media (max-width: 36em) {
+      .section-tiles img {
+        width: 93rem;
+        margin-top: 5rem;
+        margin-bottom: 7rem; } }
     .section-tiles img:hover {
       transform: scale(1.21) translateY(-5px);
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }

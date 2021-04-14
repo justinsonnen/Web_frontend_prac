@@ -1,4 +1,4 @@
-//  Primary-heading in Header 
+//  Used on Primary-heading in Header 
 @keyframes moveInDown {
     0% {
         opacity: 0;  
@@ -15,7 +15,7 @@
     }
 }
 
-//  Primary-heading--accent in Header 
+//  Used on Primary-heading--accent in Header 
 @keyframes moveInLeft-accent {
     0% {
         opacity: 0;  
@@ -32,7 +32,7 @@
     }
 }
 
-//  Primary-heading--sub in Header
+//  Used on Primary-heading--sub in Header
 @keyframes moveInRight {
     0% {
         opacity: 0;
@@ -49,7 +49,7 @@
     }
 }
 
-// Logo
+// Used on Logo
 @keyframes scaleUpFromNothing {
     0% {
         opacity: 0;
@@ -62,14 +62,3 @@
     }
 }
 
-// @keyframes moveInBottom {
-//     0% {
-//         opacity: 0;
-//         transform:translateY(3rem);
-//     }
-
-//     100% {
-//         opacity: 1;
-//         transform: translate(0);
-//     }
-// }

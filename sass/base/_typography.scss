@@ -3,8 +3,9 @@
     color: $color-primary-blue-dark;
     backface-visibility: hidden;
     margin-bottom: 6rem;
+    white-space: nowrap;
 
-    // Page title
+    // Header main title
     &--main {
         display: block;
         text-transform: uppercase;
@@ -16,14 +17,32 @@
         animation-duration: 1s;
         animation-timing-function: ease-out;
 
+            // media queries for responsive layout
+            @include respond(desktop-1) {
+                font-size: 8rem;
+                letter-spacing: .9rem;
+            }
 
-        // @include respond(phone) {
-        //     letter-spacing: 1rem;
-        //     font-size: 5rem;
-        // }
+            @include respond(tab-land) {
+                font-size: 9rem;
+                letter-spacing: .9rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 11rem;
+                letter-spacing: .8rem;
+            }
+
+            @include respond(mobile-land) {
+                font-size: 12rem;
+            }
+
+            @include respond(mobile-port) {
+                font-size: 11rem;
+            }
     }
     
-    // Page title support phrase
+    // Header support phrase
     &--sub {
         font-family: "min-glyph";
         display: block;
@@ -37,6 +56,35 @@
         animation-duration: 1s;
         animation-timing-function: ease-out;
         animation-fill-mode: backwards;
+
+
+            // media queries for responsive layout
+            @include respond(desktop-1) {
+                font-size: 3.5rem;
+                margin-top: 2.5rem;
+            }
+
+            @include respond(tab-land) {
+                font-size: 4rem;
+                letter-spacing: 5.5rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 5rem;
+                letter-spacing: 6.2rem;
+            }
+
+            @include respond(mobile-land) {
+                font-size: 6rem;
+                letter-spacing: 6.3rem;
+                margin-top: 3rem;
+            }
+
+            @include respond(mobile-port) {
+                font-size: 5rem;
+                letter-spacing: 6rem;
+                margin-top: 4rem;
+            }
     }
 
     // Accent "come visit" 
@@ -55,6 +103,35 @@
         animation-duration: 1.5s;
         animation-timing-function: ease-out;
         animation-fill-mode: backwards;
+
+            // media queries for responsive layout
+            @include respond(desktop-1) {
+                font-size: 8.5rem;
+                top: -7rem;
+                left: -7rem;
+            }
+
+            @include respond(tab-land) {
+                color: $color-primary-orange;
+                font-size: 8rem;
+                top: -7rem;
+                left: -7rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 8.5rem;
+                left: -8rem;
+            }
+
+            @include respond(mobile-land) {
+                font-size: 9rem;
+                top: -8rem;
+                left: -9.5rem;
+            }
+
+            @include respond(mobile-port) {
+                left: -8rem;
+            }
     }
 }
 
@@ -72,6 +149,38 @@ letter-spacing: .4rem;
 transition: all .2s ease-out;
 
 
+        // media queries for responsive layout
+        @include respond(desktop-2) {
+            font-size: 6rem;
+            padding-top: 3rem;
+        }
+    
+        @include respond(desktop-1) {
+            font-size: 8rem;
+            padding-top: 6rem;
+        }
+    
+        @include respond(tab-land) {
+            font-size: 8.5rem;
+            padding-top: 15rem;
+            letter-spacing: .2rem;
+            white-space: nowrap;
+        }
+    
+        @include respond(tab-port) {
+            padding-top: 25rem;
+        }
+    
+        @include respond(mobile-land) {
+            padding-top: 40rem;
+            font-size: 10rem;
+            white-space: unset;
+        }
+    
+        @include respond(mobile-port) {
+            padding-top: 50rem;
+            font-size: 10rem;
+        }
 
 &:hover {
     transform: translateY(-3.2px) scale(1.01);
@@ -86,6 +195,42 @@ transition: all .2s ease-out;
     letter-spacing: .3rem;
     color: $color-primary-blue-dark;
     
+
+    // media queries for responsive layout
+    @include respond(desktop-3) {
+        
+    }
+
+    @include respond(desktop-2) {
+        font-size: 2.8rem;
+    }
+
+    @include respond(desktop-1) {
+        font-size: 4rem;
+    }
+
+    @include respond(tab-land) {
+        padding-top: 3rem;
+        font-size: 4.2rem;
+    }
+
+    @include respond(tab-port) {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+        font-size: 5.4rem;
+    }
+
+    @include respond(mobile-land) {
+        padding-top: 5rem;
+        font-size: 5.9rem;
+    }
+
+    @include respond(mobile-port) {
+        padding-top: 6rem;
+        font-size: 6.2rem;
+    }
+
+
     &--tiles {
         margin-top: -19px;
         font-family: 'baheula';
@@ -95,11 +240,6 @@ transition: all .2s ease-out;
         color: $color-primary-green-light;
         
     }
-
-    // @include respond (phone) {
-    //     padding-top: 10px;
-    //     float: left;
-    // }
 }
 
 // Text box text
@@ -114,4 +254,31 @@ transition: all .2s ease-out;
     &:not(:last-child){
         margin-bottom: 2.5rem;
     }
+
+
+            // media queries for responsive layout
+            @include respond(desktop-2) {
+                font-size: 2rem;
+            }
+        
+            @include respond(desktop-1) {
+                font-size: 2.7rem;
+            }
+        
+            @include respond(tab-land) {
+                font-size: 3.3rem;
+            }
+        
+            @include respond(tab-port) {
+                font-size: 4rem;
+                line-height: 2;
+            }
+        
+            @include respond(mobile-land) {
+                font-size: 4.2rem;
+            }
+        
+            @include respond(mobile-port) {
+                font-size: 4.6rem;
+            }
 }

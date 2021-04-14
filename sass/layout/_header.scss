@@ -16,12 +16,65 @@
         position: absolute;
         top: 5rem;
         left: 3rem;
+
+        @include respond(desktop-2) {
+            top: 7rem;
+        }
+
+        @include respond(desktop-1) {
+            top: 10rem;
+            left: 4rem;
+        }
+
+        @include respond(tab-land) {
+            top: 13rem;
+            left: 5rem;
+        }
+
+        @include respond(tab-port) {
+            top: 15rem;
+            left: 5rem;
+        }
+
+        @include respond(mobile-land) {
+            top: 19rem;
+            left: 7rem;
+        }
+
+        @include respond(mobile-port) {
+            top: 23rem;
+            left: 8rem;
+        }
     }
 
     &__logo {
         height: 7rem;
         animation: scaleUpFromNothing 1s ease-out 1s;
         animation-fill-mode: backwards;
+
+        @include respond(desktop-2) {
+            height: 9rem;
+        }
+
+        @include respond(desktop-1) {
+            height: 10rem;
+        }
+
+        @include respond(tab-land) {
+            height: 14rem;
+        }
+
+        @include respond(tab-port) {
+            height: 17rem;
+        }
+
+        @include respond(mobile-land) {
+            height: 22rem;
+        }
+
+        @include respond(mobile-port) {
+            height: 24rem;
+        }
     }
 
     &__title-text-box {
