@@ -17,8 +17,21 @@
         top: 5rem;
         left: 3rem;
 
+         // media queries for responsive layout
+        @include respond(desktop-4) {
+             top: 7rem;
+        }
+
+        @include respond(desktop-3) {
+            top: 7rem;
+       }
+
         @include respond(desktop-2) {
             top: 7rem;
+        }
+
+        @include respond(desktop-2-port) {
+            top: 9rem;
         }
 
         @include respond(desktop-1) {
@@ -37,7 +50,7 @@
         }
 
         @include respond(mobile-land) {
-            top: 19rem;
+            top: 9rem;
             left: 7rem;
         }
 
@@ -52,29 +65,38 @@
         animation: scaleUpFromNothing 1s ease-out 1s;
         animation-fill-mode: backwards;
 
-        @include respond(desktop-2) {
-            height: 9rem;
-        }
+            // media queries for responsive layout
+            @include respond(desktop-4) {
+                height: 8rem;
+            }
 
-        @include respond(desktop-1) {
-            height: 10rem;
-        }
+            @include respond(desktop-2) {
+                height: 9rem;
+            }
 
-        @include respond(tab-land) {
-            height: 14rem;
-        }
+            @include respond(desktop-2-port) {
+                height: 10rem;
+            }
 
-        @include respond(tab-port) {
-            height: 17rem;
-        }
+            @include respond(desktop-1) {
+                height: 10rem;
+            }
 
-        @include respond(mobile-land) {
-            height: 22rem;
-        }
+            @include respond(tab-land) {
+                height: 14rem;
+            }
 
-        @include respond(mobile-port) {
-            height: 24rem;
-        }
+            @include respond(tab-port) {
+                height: 17rem;
+            }
+
+            @include respond(mobile-land) {
+                height: 14rem;
+            }
+
+            @include respond(mobile-port) {
+                height: 24rem;
+            }
     }
 
     &__title-text-box {

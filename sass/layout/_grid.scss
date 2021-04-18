@@ -7,21 +7,39 @@
     
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
-        // @include respond(tab-port) {
-        //     margin-bottom: $gutter-vertical-small;
-        // }
+    }
+
+
+    @include respond(desktop-2-port) {
+        padding: 0;
+        padding-top: 6rem;
+        max-width: 100rem;
+        position: relative;
     }
 
     @include respond(desktop-1) {
         padding-top: 9rem;
-        max-width: 200rem;
     }
 
     @include respond(tab-land) {
-        padding: 0;
-        max-width: 100rem;
+        max-width: 180rem;
         position: relative;
     }
+
+    @include respond(tab-port) {
+        max-width: 175rem;
+    }
+
+    @include respond(mobile-land) {
+        max-width: 200rem;
+        margin: 0 auto;
+    }
+
+    @include respond(mobile-port) {
+        max-width: 135rem;
+        margin: 0 auto;
+    }
+
     
 
 
@@ -32,28 +50,39 @@
 
         &:not(:last-child){
             margin-right: $gutter-horizontal;
-            // @include respond(tab-port) {
-            //     margin-right: 0;
-            //     margin-bottom: $gutter-vertical-small;
-            // }
-        }
 
-        // @include respond(tab-port) {
-        //     width: 100% !important;
-        // }
+            @include respond(mobile-port) {
+                margin-right: 30rem;
+            }
+        }
     }
 
     .col-1-of-2 {
         width: calc((100% - #{$gutter-horizontal}) / 2);
+
+        @include respond(mobile-port) {
+            width: calc((100% - (2 * 20rem)) / 2);
+        }
+
     }
 
     .col-1-of-3 {
         width: calc((100% - (2 * #{$gutter-horizontal})) / 3);
 
 
+        // media queries for responsive layout
+        @include respond(desktop-2-port) {
+            width: 100%;        
+        }
+
         @include respond(tab-land) {
             width: 100%;
         }
+
+        @include respond(mobile-land) {
+            width: calc((100% - (2 * #{$gutter-horizontal})) / 3);
+        }
+
     }
 
     .col-2-of-3 {

@@ -2,27 +2,27 @@
     height: 40vh;
     position: relative;
     color: rgba($color-white, .6);
-    //padding: 10rem 0;
     font-size: 1.4rem;
 
-    // @include respond(tab-port) {
-    //     padding: 8rem 0;
-    // }
 
-    // &__logo-box {
-    //     text-align: center;
-    //     margin-bottom: 8rem;
 
-    //     @include respond(tab-port) {
-    //         margin-bottom: 6rem;
+    @include respond(desktop-1) {
+        height: 50vh;
+    }
 
-    //     }
-    // }
+    @include respond(desktop-2-port) {
+        height: 43vh;
+    }
 
-    // &__logo {
-    //     width: 15rem;
-    //     height: auto;
-    // }
+    @include respond(mobile-land) {
+        height: 75vh;
+    }
+
+    @include respond(mobile-port) {
+        height: 70vh;
+        font-size: .2rem;
+    }
+
 
     &__navigation {
         border-top: 1px solid $color-white;
@@ -32,10 +32,34 @@
         z-index: 100;
         
 
-        // @include respond(tab-port) {
-        //     width: 100%;
-        //     text-align: center;
-        // }
+        // media queries for responsive layout
+        @include respond(desktop-4) {
+            margin-top: 40rem;
+        }
+
+        @include respond(desktop-3) {
+            margin-top: 29rem;
+       }
+
+       @include respond(desktop-2) {
+            margin-top: 32rem;
+        }
+
+       @include respond(desktop-2-port) {
+            margin-top: 58rem;
+        }
+
+        @include respond(tab-land) {
+            margin-top: 58rem;
+        }
+
+        @include respond(tab-port) {
+            margin-top: 77rem;
+        }
+
+        @include respond(mobile-port) {
+            margin-top: 7rem;
+        }
     }
 
     &__list {
@@ -77,9 +101,35 @@
         width: 60%;
         float: right;
 
-        // @include respond(tab-port) {
-        //     width: 100% !important;
-        //     float: none;
-        // }
+
+             // media queries for responsive layout
+            @include respond(desktop-4) {
+                 margin-top: 40rem;
+            }
+
+            @include respond(desktop-3) {
+                margin-top: 29rem;
+           }
+
+           @include respond(desktop-2) {
+            margin-top: 32rem;
+        }
+
+           @include respond(desktop-2-port) {
+            margin-top: 58rem;
+       }
+
+            @include respond(tab-land) {
+                margin-top: 58rem;
+            }
+
+            @include respond(tab-port) {
+                margin-top: 77rem;
+            }
+
+            @include respond(mobile-port) {
+                margin-top: 7rem;
+            }
+
     }
 }

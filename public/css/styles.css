@@ -1,27 +1,40 @@
 /*
 
-0       -  575px:  mobile-port
-575px   -  767px:  mobile-land
-767px   -  900px:  tab-port
-900px   - 1200px:  tab-land
-1200px  - 1800px:  desktop-1
-1800px  - 2000px:  desktop-2
-2400px+         :  desktop-3
+max width  410px:  mobile-port          400x800 px
+max width  810px:  mobile-land          800x400 px
+max width  810px:  tab-port             768x1024 px
+max width 1200px:  tab-land             1024x768 px
+max width 1800px:  desktop-1            1366x768 px
+max 2400+port   :  desktop-2-port       2048x2732 px
+max width 2400px:  desktop-2            1920x1080 px
+max width 2700px:  desktop-3            2560x1440 px
+2700px+         :  desktop-4            2732x2048 px, 3840x2160 px
 */
 /*
 $breakpoint arguement options:
 - mobile-port
-- mobile-tab
+- mobile-land
 - tab-port
 - tab-land
 - desktop-1
+- desktop-2-port
 - desktop-2
 - desktop-3
+- desktop-4
 
 1em = 16px
 
 ORDER: base + typogrophy > general layout + grid > page layout > components 
 */
+@-webkit-keyframes moveInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem) rotate(-3deg); }
+  75% {
+    transform: translateY(0.2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 @keyframes moveInDown {
   0% {
     opacity: 0;
@@ -31,6 +44,16 @@ ORDER: base + typogrophy > general layout + grid > page layout > components
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+@-webkit-keyframes moveInLeft-accent {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem) rotate(12deg); }
+  75% {
+    transform: translateX(0.2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(6deg); } }
 
 @keyframes moveInLeft-accent {
   0% {
@@ -42,6 +65,16 @@ ORDER: base + typogrophy > general layout + grid > page layout > components
     opacity: 1;
     transform: translate(6deg); } }
 
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem) rotate(3deg); }
+  75% {
+    transform: translateX(-0.2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -51,6 +84,14 @@ ORDER: base + typogrophy > general layout + grid > page layout > components
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+@-webkit-keyframes scaleUpFromNothing {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
 
 @keyframes scaleUpFromNothing {
   0% {
@@ -70,245 +111,34 @@ change box model to remove any padding or borders */
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%;
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-  @media (max-width: 150em) {
-    html {
-      font-size: 62.5%; } }
-  @media (max-width: 112.5em) {
-    html {
-      font-size: 43%; } }
-  @media (max-width: 75em) {
-    html {
-      font-size: 32%; } }
-  @media (max-width: 56.3em) {
-    html {
-      font-size: 25%; } }
-  @media (max-width: 48em) {
-    html {
-      font-size: 20%; } }
-  @media (max-width: 36em) {
-    html {
-      font-size: 17%; } }
-  @media (min-width: 150em) {
+  font-size: 62.5%; }
+  @media (max-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 168.75em) {
     html {
       font-size: 85.5%; } }
+  @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
+    html {
+      font-size: 62.5%; } }
+  @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+    html {
+      font-size: 92.5%; } }
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
+    html {
+      font-size: 43%; } }
+  @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+    html {
+      font-size: 32%; } }
+  @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+    html {
+      font-size: 25%; } }
+  @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+    html {
+      font-size: 20%; } }
+  @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+    html {
+      font-size: 17%; } }
+  @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+    html {
+      font-size: 100%; } }
 
 /* Add project-wide font definitions to be inherited*/
 body {
@@ -316,45 +146,15 @@ body {
   padding: 3rem;
   background-color: #dde1ef;
   font-family: "min-reg";
-  color: #999;
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-  @media (max-width: 56.3em) {
+  color: #999; }
+  @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
     body {
       padding: 0; } }
 
 .heading-primary {
   color: #28527a;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   margin-bottom: 6rem;
   white-space: nowrap; }
   .heading-primary--main {
@@ -363,180 +163,25 @@ body {
     font-family: 'min-reg-ital', sans-serif;
     font-size: 7rem;
     letter-spacing: 1rem;
-    animation-name: moveInDown;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-    @media (max-width: 112.5em) {
+    -webkit-animation-name: moveInDown;
+            animation-name: moveInDown;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+    @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
       .heading-primary--main {
         font-size: 8rem;
         letter-spacing: .9rem; } }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
       .heading-primary--main {
         font-size: 9rem;
         letter-spacing: .9rem; } }
-    @media (max-width: 56.3em) {
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
       .heading-primary--main {
         font-size: 11rem;
         letter-spacing: .8rem; } }
-    @media (max-width: 48em) {
-      .heading-primary--main {
-        font-size: 12rem; } }
-    @media (max-width: 36em) {
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
       .heading-primary--main {
         font-size: 11rem; } }
   .heading-primary--sub {
@@ -546,184 +191,29 @@ body {
     letter-spacing: 5rem;
     margin-left: 3.5rem;
     margin-top: 1rem;
-    animation-delay: .5s;
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: backwards;
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-    @media (max-width: 112.5em) {
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+    -webkit-animation-name: moveInRight;
+            animation-name: moveInRight;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards; }
+    @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
       .heading-primary--sub {
         font-size: 3.5rem;
         margin-top: 2.5rem; } }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
       .heading-primary--sub {
         font-size: 4rem;
         letter-spacing: 5.5rem; } }
-    @media (max-width: 56.3em) {
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
       .heading-primary--sub {
         font-size: 5rem;
         letter-spacing: 6.2rem; } }
-    @media (max-width: 48em) {
-      .heading-primary--sub {
-        font-size: 6rem;
-        letter-spacing: 6.3rem;
-        margin-top: 3rem; } }
-    @media (max-width: 36em) {
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
       .heading-primary--sub {
         font-size: 5rem;
         letter-spacing: 6rem;
@@ -737,189 +227,39 @@ body {
     top: -4.5rem;
     left: -3rem;
     transform: rotate(-10deg);
-    animation-delay: 1s;
-    animation-name: moveInLeft-accent;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: backwards;
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-    @media (max-width: 112.5em) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-name: moveInLeft-accent;
+            animation-name: moveInLeft-accent;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards; }
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+      .heading-primary--accent {
+        color: #CC5500; } }
+    @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
       .heading-primary--accent {
         font-size: 8.5rem;
         top: -7rem;
         left: -7rem; } }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
       .heading-primary--accent {
         color: #CC5500;
         font-size: 8rem;
         top: -7rem;
         left: -7rem; } }
-    @media (max-width: 56.3em) {
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
       .heading-primary--accent {
         font-size: 8.5rem;
         left: -8rem; } }
-    @media (max-width: 48em) {
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
       .heading-primary--accent {
+        left: -8rem;
         font-size: 9rem;
-        top: -8rem;
-        left: -9.5rem; } }
-    @media (max-width: 36em) {
-      .heading-primary--accent {
-        left: -8rem; } }
+        top: -8rem; } }
 
 .heading-secondary {
   padding: 15px 50px;
@@ -931,219 +271,40 @@ body {
   background-clip: text;
   color: transparent;
   letter-spacing: .4rem;
-  transition: all .2s ease-out;
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-  @media (max-width: 150em) {
+  transition: all .2s ease-out; }
+  @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+    .heading-secondary {
+      padding-top: 6rem; } }
+  @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
     .heading-secondary {
       font-size: 6rem;
       padding-top: 3rem; } }
-  @media (max-width: 112.5em) {
+  @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+    .heading-secondary {
+      font-size: 5rem;
+      padding-top: 20rem; } }
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
     .heading-secondary {
       font-size: 8rem;
       padding-top: 6rem; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
     .heading-secondary {
       font-size: 8.5rem;
       padding-top: 15rem;
       letter-spacing: .2rem;
       white-space: nowrap; } }
-  @media (max-width: 56.3em) {
+  @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
     .heading-secondary {
       padding-top: 25rem; } }
-  @media (max-width: 48em) {
+  @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
     .heading-secondary {
-      padding-top: 40rem;
+      padding-top: 10rem;
+      font-size: 9rem; } }
+  @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+    .heading-secondary {
+      padding-top: 28rem;
       font-size: 10rem;
       white-space: unset; } }
-  @media (max-width: 36em) {
-    .heading-secondary {
-      padding-top: 50rem;
-      font-size: 10rem; } }
   .heading-secondary:hover {
     transform: translateY(-3.2px) scale(1.01);
     text-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25); }
@@ -1152,247 +313,37 @@ body {
   font-size: 2.2rem;
   font-family: "" min-glyph ", sans-serif";
   letter-spacing: .3rem;
-  color: #28527a;
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-  @media (max-width: 150em) {
+  color: #28527a; }
+  @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+    .heading-tertiary {
+      padding-top: 1.5rem;
+      font-size: 3.2rem; } }
+  @media (max-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 168.75em) {
+    .heading-tertiary {
+      margin-top: 0.5rem; } }
+  @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
     .heading-tertiary {
       font-size: 2.8rem; } }
-  @media (max-width: 112.5em) {
+  @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
     .heading-tertiary {
-      font-size: 4rem; } }
-  @media (max-width: 75em) {
+      font-size: 3rem;
+      padding-top: 2rem; } }
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
     .heading-tertiary {
-      padding-top: 3rem;
+      font-size: 3.6rem; } }
+  @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+    .heading-tertiary {
+      padding-top: 2rem;
       font-size: 4.2rem; } }
-  @media (max-width: 56.3em) {
+  @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
     .heading-tertiary {
-      padding-top: 4rem;
+      padding-top: 4.3rem;
       padding-bottom: 3rem;
       font-size: 5.4rem; } }
-  @media (max-width: 48em) {
+  @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
     .heading-tertiary {
-      padding-top: 5rem;
-      font-size: 5.9rem; } }
-  @media (max-width: 36em) {
-    .heading-tertiary {
-      padding-top: 6rem;
-      font-size: 6.2rem; } }
+      padding-top: 2rem;
+      font-size: 5rem; } }
   .heading-tertiary--tiles {
     margin-top: -19px;
     font-family: 'baheula';
@@ -1400,220 +351,54 @@ body {
     letter-spacing: .5rem;
     text-align: center;
     color: #00917c; }
+    @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
+      .heading-tertiary--tiles {
+        margin-top: -14px; } }
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+      .heading-tertiary--tiles {
+        margin-top: -10px; } }
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+      .heading-tertiary--tiles {
+        margin-top: -9.5px;
+        font-size: 5.5rem; } }
+    @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+      .heading-tertiary--tiles {
+        font-size: 5rem; } }
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+      .heading-tertiary--tiles {
+        margin-top: -7px;
+        font-size: 5.5rem; } }
 
 .paragraph {
   font-size: 1.6rem;
   color: #777;
   text-transform: lowercase;
   font-family: "min-reg";
-  line-height: 1.8;
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
+  line-height: 1.8; }
   .paragraph:not(:last-child) {
     margin-bottom: 2.5rem; }
-  @media (max-width: 150em) {
+  @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+    .paragraph {
+      font-size: 2.3rem; } }
+  @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
     .paragraph {
       font-size: 2rem; } }
-  @media (max-width: 112.5em) {
+  @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+    .paragraph {
+      font-size: 2.45rem; } }
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
     .paragraph {
       font-size: 2.7rem; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
     .paragraph {
-      font-size: 3.3rem; } }
-  @media (max-width: 56.3em) {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
     .paragraph {
       font-size: 4rem;
       line-height: 2; } }
-  @media (max-width: 48em) {
+  @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
     .paragraph {
-      font-size: 4.2rem; } }
-  @media (max-width: 36em) {
-    .paragraph {
-      font-size: 4.6rem; } }
+      font-size: 4rem; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -1694,8 +479,10 @@ body {
   transition: all .4s; }
 
 .btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards; }
+  -webkit-animation: moveInBottom .5s ease-out .75s;
+          animation: moveInBottom .5s ease-out .75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards; }
 
 .btn-text:link, .btn-text:visited {
   font-family: 'min-glyph';
@@ -1705,176 +492,25 @@ body {
   text-decoration: none;
   padding: 3px;
   transition: all .2s ease-out;
-  backface-visibility: hidden;
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-  @media (max-width: 150em) {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
+  @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+    .btn-text:link, .btn-text:visited {
+      font-size: 2.8rem; } }
+  @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
     .btn-text:link, .btn-text:visited {
       font-size: 2.5rem; } }
-  @media (max-width: 112.5em) {
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
     .btn-text:link, .btn-text:visited {
       font-size: 3.2rem; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
     .btn-text:link, .btn-text:visited {
       padding-top: 3rem;
       font-size: 4rem; } }
-  @media (max-width: 56.3em) {
+  @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
     .btn-text:link, .btn-text:visited {
       font-size: 4.5rem; } }
-  @media (max-width: 36em) {
+  @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
     .btn-text:link, .btn-text:visited {
       font-size: 6rem; } }
 
@@ -1902,7 +538,8 @@ body {
   .bg-video__content {
     height: 100%;
     width: 100%;
-    object-fit: cover; }
+    -o-object-fit: cover;
+       object-fit: cover; }
   .bg-video--about::before {
     content: "";
     display: block;
@@ -1941,249 +578,41 @@ body {
     width: 55rem;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -35%);
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-    @media (max-width: 150em) {
+    transform: translate(-50%, -35%); }
+    @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+      .textbox--about {
+        height: 71rem;
+        width: 75rem; } }
+    @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
       .textbox--about {
         height: 61rem;
         width: 65rem; } }
-    @media (max-width: 112.5em) {
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+      .textbox--about {
+        height: 100rem;
+        width: 55rem;
+        top: 46%; } }
+    @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
+      .textbox--about {
+        height: 67rem;
+        width: 110rem;
+        top: 54%; } }
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+      .textbox--about {
+        height: 90rem;
+        width: 90rem; } }
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+      .textbox--about {
+        height: 170rem;
+        width: 90rem;
+        top: 46%; } }
+    @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
       .textbox--about {
         height: 80rem;
-        width: 90rem;
-        top: 45%; } }
-    @media (max-width: 75em) {
+        width: 130rem; } }
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
       .textbox--about {
-        height: 115rem;
-        width: 90rem;
-        top: 45%; } }
-    @media (max-width: 56.3em) {
-      .textbox--about {
-        height: 175rem;
-        width: 90rem; } }
-    @media (max-width: 48em) {
-      .textbox--about {
-        height: 190rem;
-        top: 50%; } }
-    @media (max-width: 36em) {
-      .textbox--about {
-        height: 220rem;
+        height: 170rem;
         top: 47%; } }
   .textbox--tiles {
     height: 1rem;
@@ -2191,6 +620,27 @@ body {
     transform: translateY(-20%);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     transition: all .5s ease-in-out; }
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+      .textbox--tiles {
+        transform: translate(60%, -25%); } }
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+      .textbox--tiles {
+        transform: translate(53rem, -2rem); } }
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+      .textbox--tiles {
+        height: 7rem;
+        width: 40rem;
+        transform: translate(43rem, -2rem); } }
+    @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+      .textbox--tiles {
+        transform: none;
+        height: 5rem;
+        width: 40rem; } }
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+      .textbox--tiles {
+        height: 7rem;
+        width: 45rem;
+        transform: translate(30rem, -2rem); } }
   .textbox--contact_us {
     height: 50rem;
     width: 100rem;
@@ -2200,6 +650,31 @@ body {
     margin-left: auto; }
     .textbox--contact_us .paragraph {
       color: rgba(0, 0, 0, 0.6); }
+    @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+      .textbox--contact_us {
+        height: 65rem; } }
+    @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
+      .textbox--contact_us {
+        height: 60rem; } }
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+      .textbox--contact_us {
+        height: 72rem; } }
+    @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
+      .textbox--contact_us {
+        height: 75rem; } }
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+      .textbox--contact_us {
+        height: 90rem; } }
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+      .textbox--contact_us {
+        height: 133rem; } }
+    @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+      .textbox--contact_us {
+        width: 160rem;
+        height: 77rem; } }
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+      .textbox--contact_us {
+        height: 150rem; } }
 
 .form__group:not(:last-child) {
   margin-bottom: 1rem; }
@@ -2242,80 +717,33 @@ body {
 
 .row {
   max-width: 160rem;
-  margin: 0 auto;
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
+  margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-  @media (max-width: 112.5em) {
-    .row {
-      padding-top: 9rem;
-      max-width: 200rem; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
     .row {
       padding: 0;
+      padding-top: 6rem;
       max-width: 100rem;
       position: relative; } }
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
+    .row {
+      padding-top: 9rem; } }
+  @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+    .row {
+      max-width: 180rem;
+      position: relative; } }
+  @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+    .row {
+      max-width: 175rem; } }
+  @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+    .row {
+      max-width: 200rem;
+      margin: 0 auto; } }
+  @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+    .row {
+      max-width: 135rem;
+      margin: 0 auto; } }
   .row::after {
     content: "";
     display: table;
@@ -2324,44 +752,25 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 30rem; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+      .row .col-1-of-2 {
+        width: calc((100% - (2 * 20rem)) / 2); } }
   .row .col-1-of-3 {
-    width: calc((100% - (2 * 6rem)) / 3);
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-    @media (max-width: 75em) {
+    width: calc((100% - (2 * 6rem)) / 3); }
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
       .row .col-1-of-3 {
         width: 100%; } }
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+      .row .col-1-of-3 {
+        width: 100%; } }
+    @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+      .row .col-1-of-3 {
+        width: calc((100% - (2 * 6rem)) / 3); } }
   .row .col-2-of-3 {
     width: calc(2 * ((100% - (2 * 6rem)) / 3) + 6rem); }
   .row .col-1-of-4 {
@@ -2384,422 +793,67 @@ body {
   .header__logo-box {
     position: absolute;
     top: 5rem;
-    left: 3rem;
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-    @media (max-width: 150em) {
+    left: 3rem; }
+    @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
       .header__logo-box {
         top: 7rem; } }
-    @media (max-width: 112.5em) {
+    @media (max-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 168.75em) {
+      .header__logo-box {
+        top: 7rem; } }
+    @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
+      .header__logo-box {
+        top: 7rem; } }
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+      .header__logo-box {
+        top: 9rem; } }
+    @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
       .header__logo-box {
         top: 10rem;
         left: 4rem; } }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
       .header__logo-box {
         top: 13rem;
         left: 5rem; } }
-    @media (max-width: 56.3em) {
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
       .header__logo-box {
         top: 15rem;
         left: 5rem; } }
-    @media (max-width: 48em) {
+    @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
       .header__logo-box {
-        top: 19rem;
+        top: 9rem;
         left: 7rem; } }
-    @media (max-width: 36em) {
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
       .header__logo-box {
         top: 23rem;
         left: 8rem; } }
   .header__logo {
     height: 7rem;
-    animation: scaleUpFromNothing 1s ease-out 1s;
-    animation-fill-mode: backwards;
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-    @media (max-width: 150em) {
+    -webkit-animation: scaleUpFromNothing 1s ease-out 1s;
+            animation: scaleUpFromNothing 1s ease-out 1s;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards; }
+    @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+      .header__logo {
+        height: 8rem; } }
+    @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
       .header__logo {
         height: 9rem; } }
-    @media (max-width: 112.5em) {
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
       .header__logo {
         height: 10rem; } }
-    @media (max-width: 75em) {
+    @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
+      .header__logo {
+        height: 10rem; } }
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
       .header__logo {
         height: 14rem; } }
-    @media (max-width: 56.3em) {
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
       .header__logo {
         height: 17rem; } }
-    @media (max-width: 48em) {
+    @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
       .header__logo {
-        height: 22rem; } }
-    @media (max-width: 36em) {
+        height: 14rem; } }
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
       .header__logo {
         height: 24rem; } }
   .header__title-text-box {
@@ -2814,12 +868,46 @@ body {
   position: relative;
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.4rem; }
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
+    .footer {
+      height: 50vh; } }
+  @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+    .footer {
+      height: 43vh; } }
+  @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+    .footer {
+      height: 75vh; } }
+  @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+    .footer {
+      height: 70vh;
+      font-size: .2rem; } }
   .footer__navigation {
     border-top: 1px solid #fff;
     padding-top: 1.1rem;
     display: inline-block;
     top: 1rem;
     z-index: 100; }
+    @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+      .footer__navigation {
+        margin-top: 40rem; } }
+    @media (max-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 168.75em) {
+      .footer__navigation {
+        margin-top: 29rem; } }
+    @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
+      .footer__navigation {
+        margin-top: 32rem; } }
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+      .footer__navigation {
+        margin-top: 58rem; } }
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+      .footer__navigation {
+        margin-top: 58rem; } }
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+      .footer__navigation {
+        margin-top: 77rem; } }
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+      .footer__navigation {
+        margin-top: 7rem; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -2840,348 +928,150 @@ body {
     padding-top: 1.1rem;
     width: 60%;
     float: right; }
+    @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+      .footer__copyright {
+        margin-top: 40rem; } }
+    @media (max-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 168.75em) {
+      .footer__copyright {
+        margin-top: 29rem; } }
+    @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
+      .footer__copyright {
+        margin-top: 32rem; } }
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+      .footer__copyright {
+        margin-top: 58rem; } }
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+      .footer__copyright {
+        margin-top: 58rem; } }
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+      .footer__copyright {
+        margin-top: 77rem; } }
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+      .footer__copyright {
+        margin-top: 7rem; } }
 
 .section-about {
   padding: 0;
   margin-top: -5rem;
   position: relative;
   height: 95vh; }
+  @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
+    .section-about {
+      height: 110vh; } }
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
+    .section-about {
+      height: 110vh; } }
 
 .section-tiles {
   height: 75vh;
-  position: relative;
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-  /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-  @media (max-width: 150em) {
+  position: relative; }
+  @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
     .section-tiles {
       height: 60vh; } }
-  @media (max-width: 112.5em) {
+  @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
     .section-tiles {
-      height: 70vh; } }
-  @media (max-width: 75em) {
+      height: 60vh; } }
+  @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
     .section-tiles {
-      height: 92vh;
+      height: 120vh;
       transform: translate(0, -6%); } }
-  @media (max-width: 56.3em) {
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
     .section-tiles {
-      height: 72vh;
+      height: 85vh; } }
+  @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+    .section-tiles {
+      height: 150vh;
+      transform: translate(0, -6%); } }
+  @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+    .section-tiles {
+      height: 112vh;
       transform: translate(0, -7%); } }
+  @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+    .section-tiles {
+      height: 90vh;
+      transform: none; } }
+  @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+    .section-tiles {
+      height: 105vh; } }
   .section-tiles img {
     border-radius: 30px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     transition: all .4s ease-in-out;
     width: 50rem;
-    object-fit: cover;
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
-    /*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
-    }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */ }
-    @media (max-width: 112.5em) {
-      .section-tiles img {
-        width: 53rem; } }
-    @media (max-width: 75em) {
+    -o-object-fit: cover;
+       object-fit: cover; }
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
       .section-tiles img {
         width: 73rem;
         display: block;
         margin-left: auto;
         margin-right: auto; } }
-    @media (max-width: 56.3em) {
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
       .section-tiles img {
-        margin-bottom: 3rem; } }
-    @media (max-width: 48em) {
-      .section-tiles img {
-        width: 83rem;
-        margin-bottom: 5rem; } }
-    @media (max-width: 36em) {
+        width: 73rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6rem; } }
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
       .section-tiles img {
         width: 93rem;
-        margin-top: 5rem;
-        margin-bottom: 7rem; } }
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6rem; } }
+    @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+      .section-tiles img {
+        width: 63rem; } }
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+      .section-tiles img {
+        width: 93rem;
+        margin-top: 5rem; } }
     .section-tiles img:hover {
       transform: scale(1.21) translateY(-5px);
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
   .section-tiles .tiles-img:hover + .textbox--tiles {
     opacity: 0;
     transform: scale(0.5); }
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+      .section-tiles .tiles-img:hover + .textbox--tiles {
+        opacity: 0;
+        transform: scale(0.5) translate(100rem, -10rem); } }
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+      .section-tiles .tiles-img:hover + .textbox--tiles {
+        opacity: 0;
+        transform: scale(0.5) translate(70rem, -10rem); } }
+    @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+      .section-tiles .tiles-img:hover + .textbox--tiles {
+        opacity: 0;
+        transform: scale(0.5) translate(0, 0); } }
 
 .section-gallery {
   height: 140vh;
   background-image: linear-gradient(to bottom, #f7f7f7, rgba(40, 82, 122, 0.5));
   -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%);
   clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%); }
+  @media (min-width: 168.75em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) {
+    .section-gallery {
+      height: 115vh; } }
+  @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+    .section-gallery {
+      height: 185vh; } }
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
+    .section-gallery {
+      height: 143vh; } }
+  @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+    .section-gallery {
+      height: 165vh; } }
+  @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+    .section-gallery {
+      height: 185vh; } }
+  @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+    .section-gallery {
+      height: 185vh; } }
+  @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+    .section-gallery {
+      height: 170vh; } }
   .section-gallery .gallery_grid_layout {
     padding: 0 10%;
     margin: 0 20rem;
@@ -3190,6 +1080,28 @@ body {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px; }
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+      .section-gallery .gallery_grid_layout {
+        grid-template-rows: repeat(60, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 50px;
+        height: 300rem; } }
+    @media only screen and (max-width: 75em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) {
+      .section-gallery .gallery_grid_layout {
+        padding: 0;
+        height: 160rem; } }
+    @media only screen and (max-width: 50.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) {
+      .section-gallery .gallery_grid_layout {
+        grid-template-rows: repeat(25, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 30px;
+        height: 40rem; } }
+    @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+      .section-gallery .gallery_grid_layout {
+        grid-template-rows: repeat(30, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        padding-top: 10rem; } }
   .section-gallery .grid_layout-item {
     color: #fde8cd;
     display: flex;
@@ -3199,15 +1111,47 @@ body {
     .section-gallery .grid_layout-item.square {
       grid-row: span 2;
       grid-column: span 2; }
+      @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+        .section-gallery .grid_layout-item.square {
+          grid-row: span 10;
+          grid-column: span 5; } }
+      @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+        .section-gallery .grid_layout-item.square {
+          grid-row: span 10;
+          grid-column: span 5; } }
     .section-gallery .grid_layout-item.large-square {
       grid-row: span 3;
       grid-column: span 3; }
+      @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+        .section-gallery .grid_layout-item.large-square {
+          grid-row: span 10;
+          grid-column: span 5; } }
+      @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+        .section-gallery .grid_layout-item.large-square {
+          grid-row: span 10;
+          grid-column: span 5; } }
     .section-gallery .grid_layout-item.tall {
       grid-row: span 3;
       grid-column: span 2; }
+      @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+        .section-gallery .grid_layout-item.tall {
+          grid-row: span 10;
+          grid-column: span 5; } }
+      @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+        .section-gallery .grid_layout-item.tall {
+          grid-row: span 10;
+          grid-column: span 5; } }
     .section-gallery .grid_layout-item.wide {
       grid-row: span 2;
       grid-column: span 3; }
+      @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+        .section-gallery .grid_layout-item.wide {
+          grid-row: span 10;
+          grid-column: span 5; } }
+      @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+        .section-gallery .grid_layout-item.wide {
+          grid-row: span 10;
+          grid-column: span 5; } }
   .section-gallery .one {
     background-image: url(/public/images/grid3-lg.jpg);
     background-size: cover;
@@ -3244,6 +1188,9 @@ body {
     background-color: rgba(33, 32, 156, 0.6);
     background-blend-mode: multiply;
     transition: all .3s ease-in-out; }
+    @media only screen and (max-width: 150em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) {
+      .section-gallery .four {
+        display: none; } }
     .section-gallery .four:hover {
       background-color: transparent;
       transform: scale(1.1);
@@ -3272,3 +1219,15 @@ body {
 .section-contact_us {
   position: relative;
   height: 80vh; }
+  @media (max-width: 150em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) {
+    .section-contact_us {
+      height: 90vh; } }
+  @media (max-width: 112.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) {
+    .section-contact_us {
+      height: 110vh; } }
+  @media only screen and (max-width: 50.6em) and (orientation: landscape), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) {
+    .section-contact_us {
+      height: 110vh; } }
+  @media only screen and (max-width: 25.6em) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) {
+    .section-contact_us {
+      height: 90vh; } }

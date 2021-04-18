@@ -12,10 +12,18 @@ change box model to remove any padding or borders */
 html {
     font-size: 62.5%;                           // 1 rem = 10px;  10px/16px = 62.5%
 
+    // 2400px - 2700px
+    @include respond(desktop-3) {
+        font-size: 85.5%;
+    }
 
     // 1800px - 2400px
     @include respond(desktop-2) {
         font-size: 62.5%;
+    }
+
+    @include respond(desktop-2-port) {
+        font-size: 92.5%;
     }
 
     // 1200px - 1800px
@@ -23,30 +31,31 @@ html {
         font-size: 43%;
     }
 
-    // 900px - 1200px
+    // 1200px max width orientation: landscape
     @include respond(tab-land) {
         font-size: 32%;
     }
 
-    // 767px - 900px
+    // 810px max width orientation: portrait
     @include respond(tab-port) {
         font-size: 25%;
     }
 
-    // 575px - 767px
+    // 810px max width orientation: landscape
     @include respond(mobile-land) {
         font-size: 20%;
     }
 
-    // 575px and under
+    // 410px and under
     @include respond(mobile-port){
         font-size: 17%;
+    }   
+
+    // 2700px+
+    @include respond(desktop-4) {
+        font-size: 100%;
     }
 
-    // 2400px+
-    @include respond(desktop-3) {
-        font-size: 85.5%;
-    }
 
 }
 

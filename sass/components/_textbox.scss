@@ -17,8 +17,9 @@
             transform: translate(-50%, -35%);
 
                     // media queries for responsive layout
-                    @include respond(desktop-3) {
-                            
+                    @include respond(desktop-4) {
+                        height: 71rem;
+                        width: 75rem;
                     }
 
                     @include respond(desktop-2) {
@@ -26,30 +27,36 @@
                         width: 65rem;
                     }
 
+                    @include respond(desktop-2-port) {
+                        height: 100rem;
+                        width: 55rem;
+                        top: 46%
+                    }
+
                     @include respond(desktop-1) {
-                        height: 80rem;
-                        width: 90rem;
-                        top: 45%;
+                        height: 67rem;
+                        width: 110rem;
+                        top: 54%;
                     }
 
                     @include respond(tab-land) {
-                        height: 115rem;
+                        height: 90rem;
                         width: 90rem;
-                        top: 45%;
                     }
 
                     @include respond(tab-port) {
-                        height: 175rem;
+                        height: 170rem;
                         width: 90rem;
+                        top: 46%;
                     }
 
                     @include respond(mobile-land) {
-                        height: 190rem;
-                        top: 50%;
+                        height: 80rem;
+                        width: 130rem;
                     }
 
                     @include respond(mobile-port) {
-                        height: 220rem;
+                        height: 170rem;
                         top: 47%;
                     }
         }
@@ -60,6 +67,33 @@
             transform: translateY(-20%);
             box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
             transition:  all .5s ease-in-out;
+
+            // media queries for responsive layout
+            @include respond(desktop-2-port) {
+                transform: translate(60%, -25%);
+            }
+
+            @include respond(tab-land) {
+                transform: translate(53rem, -2rem);
+            }
+
+            @include respond(tab-port) {
+                height: 7rem;
+                width: 40rem;
+                transform: translate(43rem, -2rem);
+            }
+
+            @include respond(mobile-land) {
+                transform: none;
+                height: 5rem;
+                width: 40rem;
+            }
+
+            @include respond(mobile-port) {
+                height: 7rem;
+                width: 45rem;
+                transform: translate(30rem, -2rem);
+            }
         }
 
         &--contact_us {
@@ -74,6 +108,40 @@
 
             & .paragraph {
                 color: rgba($color-black, .6);
+            }
+
+            // media queries for responsive layout
+            @include respond(desktop-4) {
+                height: 65rem;
+            }
+
+            @include respond(desktop-2) {
+                height: 60rem;
+            }
+
+            @include respond(desktop-2-port) {
+                height: 72rem;
+            }
+
+            @include respond(desktop-1) {
+                height: 75rem;
+            }
+
+            @include respond(tab-land) {
+                height: 90rem; 
+            }
+
+            @include respond(tab-port) {
+                height: 133rem; 
+            }
+
+            @include respond(mobile-land) {
+                width: 160rem;
+                height: 77rem; 
+            }
+
+            @include respond(mobile-port) {
+                height: 150rem; 
             }
         }
     

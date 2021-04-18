@@ -18,6 +18,7 @@
         animation-timing-function: ease-out;
 
             // media queries for responsive layout
+
             @include respond(desktop-1) {
                 font-size: 8rem;
                 letter-spacing: .9rem;
@@ -33,9 +34,9 @@
                 letter-spacing: .8rem;
             }
 
-            @include respond(mobile-land) {
-                font-size: 12rem;
-            }
+            // @include respond(mobile-land) {
+            //     font-size: 12rem;
+            // }
 
             @include respond(mobile-port) {
                 font-size: 11rem;
@@ -74,11 +75,11 @@
                 letter-spacing: 6.2rem;
             }
 
-            @include respond(mobile-land) {
-                font-size: 6rem;
-                letter-spacing: 6.3rem;
-                margin-top: 3rem;
-            }
+            // @include respond(mobile-land) {
+            //     font-size: 6rem;
+            //     letter-spacing: 6.3rem;
+            //     margin-top: 3rem;
+            // }
 
             @include respond(mobile-port) {
                 font-size: 5rem;
@@ -105,6 +106,10 @@
         animation-fill-mode: backwards;
 
             // media queries for responsive layout
+            @include respond(desktop-2-port) {
+                color: $color-primary-orange;
+            }
+
             @include respond(desktop-1) {
                 font-size: 8.5rem;
                 top: -7rem;
@@ -123,14 +128,16 @@
                 left: -8rem;
             }
 
-            @include respond(mobile-land) {
-                font-size: 9rem;
-                top: -8rem;
-                left: -9.5rem;
-            }
+            // @include respond(mobile-land) {
+            //     font-size: 9rem;
+            //     top: -8rem;
+            //     left: -9.5rem;
+            // }
 
             @include respond(mobile-port) {
                 left: -8rem;
+                font-size: 9rem;
+                top: -8rem;
             }
     }
 }
@@ -150,9 +157,18 @@ transition: all .2s ease-out;
 
 
         // media queries for responsive layout
+        @include respond(desktop-4) {
+            padding-top: 6rem;
+        }
+        
         @include respond(desktop-2) {
             font-size: 6rem;
             padding-top: 3rem;
+        }
+
+        @include respond(desktop-2-port) {
+            font-size: 5rem;
+            padding-top: 20rem;
         }
     
         @include respond(desktop-1) {
@@ -172,14 +188,14 @@ transition: all .2s ease-out;
         }
     
         @include respond(mobile-land) {
-            padding-top: 40rem;
-            font-size: 10rem;
-            white-space: unset;
+            padding-top: 10rem;
+            font-size: 9rem;
         }
     
         @include respond(mobile-port) {
-            padding-top: 50rem;
+            padding-top: 28rem;
             font-size: 10rem;
+            white-space: unset;
         }
 
 &:hover {
@@ -197,37 +213,47 @@ transition: all .2s ease-out;
     
 
     // media queries for responsive layout
+    @include respond(desktop-4) {
+        padding-top: 1.5rem;
+        font-size: 3.2rem;
+    }
+
     @include respond(desktop-3) {
-        
+        margin-top: 0.5rem;
     }
 
     @include respond(desktop-2) {
         font-size: 2.8rem;
     }
 
+    @include respond(desktop-2-port) {
+        font-size: 3rem;
+        padding-top: 2rem;
+    }
+
     @include respond(desktop-1) {
-        font-size: 4rem;
+        font-size: 3.6rem;
     }
 
     @include respond(tab-land) {
-        padding-top: 3rem;
+        padding-top: 2rem;
         font-size: 4.2rem;
     }
 
     @include respond(tab-port) {
-        padding-top: 4rem;
+        padding-top: 4.3rem;
         padding-bottom: 3rem;
         font-size: 5.4rem;
     }
 
-    @include respond(mobile-land) {
-        padding-top: 5rem;
-        font-size: 5.9rem;
-    }
+    // @include respond(mobile-land) {
+    //     padding-top: 5rem;
+    //     font-size: 5.9rem;
+    // }
 
     @include respond(mobile-port) {
-        padding-top: 6rem;
-        font-size: 6.2rem;
+        padding-top: 2rem;
+        font-size: 5rem;
     }
 
 
@@ -238,6 +264,29 @@ transition: all .2s ease-out;
         letter-spacing: .5rem;
         text-align: center;
         color: $color-primary-green-light;
+
+        // media queries for responsive layout
+        @include respond(desktop-1) {
+            margin-top: -14px;
+        }
+    
+        @include respond(tab-land) {
+            margin-top: -10px;
+        }
+    
+        @include respond(tab-port) {
+            margin-top: -9.5px;
+           font-size: 5.5rem;
+        }
+    
+        @include respond(mobile-land) {
+            font-size: 5rem;
+        }
+    
+        @include respond(mobile-port) {
+           margin-top: -7px;
+           font-size: 5.5rem;
+        }
         
     }
 }
@@ -257,8 +306,16 @@ transition: all .2s ease-out;
 
 
             // media queries for responsive layout
+            @include respond(desktop-4) {
+                font-size: 2.3rem;
+            }
+
             @include respond(desktop-2) {
                 font-size: 2rem;
+            }
+
+            @include respond(desktop-2-port) {
+                font-size: 2.45rem;
             }
         
             @include respond(desktop-1) {
@@ -266,7 +323,7 @@ transition: all .2s ease-out;
             }
         
             @include respond(tab-land) {
-                font-size: 3.3rem;
+                font-size: 3rem;
             }
         
             @include respond(tab-port) {
@@ -274,11 +331,11 @@ transition: all .2s ease-out;
                 line-height: 2;
             }
         
-            @include respond(mobile-land) {
-                font-size: 4.2rem;
-            }
+            // @include respond(mobile-land) {
+            //     font-size: 4.2rem;
+            // }
         
             @include respond(mobile-port) {
-                font-size: 4.6rem;
+                font-size: 4rem;
             }
 }

@@ -11,13 +11,15 @@
 // MEDIA QUERY MANAGER
 /*
 
-0       -  575px:  mobile-port
-575px   -  767px:  mobile-land
-767px   -  900px:  tab-port
-900px   - 1200px:  tab-land
-1200px  - 1800px:  desktop-1
-1800px  - 2000px:  desktop-2
-2400px+         :  desktop-3
+max width  410px:  mobile-port          400x800 px
+max width  810px:  mobile-land          800x400 px
+max width  810px:  tab-port             768x1024 px
+max width 1200px:  tab-land             1024x768 px
+max width 1800px:  desktop-1            1366x768 px
+max 2400+port   :  desktop-2-port       2048x2732 px
+max width 2400px:  desktop-2            1920x1080 px
+max width 2700px:  desktop-3            2560x1440 px
+2700px+         :  desktop-4            2732x2048 px, 3840x2160 px
 */
 
 @mixin respond-phone {
@@ -27,76 +29,64 @@
 /*
 $breakpoint arguement options:
 - mobile-port
-- mobile-tab
+- mobile-land
 - tab-port
 - tab-land
 - desktop-1
+- desktop-2-port
 - desktop-2
 - desktop-3
+- desktop-4
 
 1em = 16px
 
 ORDER: base + typogrophy > general layout + grid > page layout > components 
 */
 @mixin respond($breakpoint){
+
     @if $breakpoint == mobile-port {
-        @media (max-width: 36em) { @content };           //575px / 16 = 36em
+        @media only screen and (max-width: 25.6em) and (orientation: portrait),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 25.6em) and (orientation: portrait) { @content };           //410px / 16 = 25.6em
     }
 
     @if $breakpoint == mobile-land {
-        @media (max-width: 48em) { @content };           //767px / 16 = 48em
+        @media only screen and (max-width: 50.6em) and (orientation: landscape),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: landscape) { @content };          //810px / 16 = 50.6em
     }
 
     @if $breakpoint == tab-port {
-        @media (max-width: 56.3em) { @content };         //900px / 16 = 56.3em
+        @media only screen and (max-width: 50.6em) and (orientation: portrait),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 50.6em) and (orientation: portrait) { @content };          //810px / 16 = 50.6em
     }
 
     @if $breakpoint == tab-land {
-        @media (max-width: 75em) { @content };           //1200px / 16 = 75em
+        @media only screen and (max-width: 75em) and (orientation: landscape),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 75em) and (orientation: landscape) { @content };           //1200px / 16 = 75em
     }
 
     @if $breakpoint == desktop-1 {
-        @media (max-width: 112.5em) { @content };        //1800px / 16 = 112.5em
+        @media (max-width: 112.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 112.5em) { @content };        //1800px / 16 = 112.5em
     }    
 
+    @if $breakpoint == desktop-2-port {
+        @media only screen and (max-width: 150em) and (orientation: portrait),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) and (orientation: portrait) { @content };          //2400px / 16 = 150em
+    }
+
     @if $breakpoint == desktop-2 {
-        @media (max-width: 150em) { @content };          //2400px / 16 = 125em
+        @media (max-width: 150em), 
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 150em) { @content };          //2400px / 16 = 150em
     }
 
     @if $breakpoint == desktop-3 {
-        @media (min-width: 150em) { @content };          //2400px / 16 = 150em
+        @media (max-width: 168.75em), 
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 168.75em) { @content };          //2700px / 16 = 168.75em
     }
 
-/*
-    // media queries for responsive layout
-    @include respond(desktop-3) {
-            
+    @if $breakpoint == desktop-4 {
+        @media (min-width: 168.75em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 168.75em) { @content };          //2700px / 16 = 168.75em
     }
-
-    @include respond(desktop-2) {
-        
-    }
-
-    @include respond(desktop-1) {
-        
-    }
-
-    @include respond(tab-land) {
-        
-    }
-
-    @include respond(tab-port) {
-        
-    }
-
-    @include respond(mobile-land) {
-        
-    }
-
-    @include respond(mobile-port) {
-       
-    }
-
-    */
 
 }

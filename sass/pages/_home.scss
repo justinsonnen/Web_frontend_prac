@@ -4,6 +4,14 @@
     margin-top: -5rem;
     position: relative;
     height: 95vh;
+
+    @include respond(desktop-2) {
+        height: 110vh;
+    }
+
+    @include respond(desktop-1) {
+        height: 110vh;
+    }
 }
 
 .section-tiles {
@@ -12,22 +20,41 @@
     
 
                     // media queries for responsive layout
+                    @include respond(desktop-4) {
+                        height: 60vh;
+                    }
+
                     @include respond(desktop-2) {
                         height: 60vh;
                     }
 
+                    @include respond(desktop-2-port) {
+                        height: 120vh;
+                        transform: translate(0, -6%);
+                    }
+
                     @include respond(desktop-1) {
-                        height: 70vh;
+                        height: 85vh;
+                        
                     }
         
                     @include respond(tab-land) {
-                        height: 92vh;
+                        height: 150vh;
                         transform: translate(0, -6%);
                     }
         
                     @include respond(tab-port) {
-                        height: 72vh;
+                        height: 112vh;
                         transform: translate(0, -7%);
+                    }
+
+                    @include respond(mobile-land) {
+                        height: 90vh;
+                        transform: none;
+                    }
+                
+                    @include respond(mobile-port) {
+                       height: 105vh;
                     }
 
 
@@ -40,8 +67,11 @@
 
 
             // media queries for responsive layout
-            @include respond(desktop-1) {
-                width: 53rem;
+            @include respond(desktop-2-port) {
+                width: 73rem;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
             }
 
             @include respond(tab-land) {
@@ -49,21 +79,25 @@
                 display:block;
                 margin-left:auto;
                 margin-right:auto;
+                margin-top: 6rem;
             }
 
             @include respond(tab-port) {
-                margin-bottom: 3rem;
+                width: 93rem;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                margin-top: 6rem;
             }
 
             @include respond(mobile-land) {
-                width: 83rem;
-                margin-bottom: 5rem;
+                width: 63rem;
+                
             }
 
             @include respond(mobile-port) {
                 width: 93rem;
                 margin-top: 5rem;
-                margin-bottom: 7rem;
             }
         
 
@@ -71,7 +105,6 @@
         &:hover {
             transform: scale(1.21) translateY(-5px);
             box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
-            
         }
 
     }
@@ -79,11 +112,22 @@
     .tiles-img:hover + .textbox--tiles {
         opacity: 0;
         transform: scale(0.5);
-    }
 
-    // .gallery-img:hover .gallery-img:not(:hover) + .textbox--gallery {
-    //     opacity: 0;
-    // }
+            @include respond(tab-land) {
+                opacity: 0;
+                transform: scale(0.5) translate(100rem, -10rem);
+            }
+
+            @include respond(tab-port) {
+                opacity: 0;
+                transform: scale(0.5) translate(70rem, -10rem);
+            }
+
+            @include respond(mobile-land) {
+                opacity: 0;
+                transform: scale(0.5) translate(0, 0);
+            }
+    }
 
 
 }
@@ -94,6 +138,36 @@
     -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%);
     clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 50% 95%, 0 100%);
 
+
+    // media queries for responsive layout
+    @include respond(desktop-4) {
+        height: 115vh;  
+    }
+
+    @include respond(desktop-2-port) {
+        height: 185vh;  
+    }
+
+    @include respond(desktop-1) {
+        height: 143vh;  
+    }
+
+    @include respond(tab-land) {
+        height: 165vh;  
+       }
+
+    @include respond(tab-port) {
+        height: 185vh;  
+       }   
+
+       @include respond(mobile-land) {
+        height: 185vh;  
+       }  
+
+    @include respond(mobile-port) {
+     height: 170vh;  
+    }
+
     .gallery_grid_layout {
         padding: 0 10%;
         margin: 0 20rem;
@@ -102,6 +176,33 @@
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 20px;
+
+
+        @include respond(desktop-2-port) {
+            grid-template-rows: repeat(60, 1fr);
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 50px;
+            height: 300rem;
+        }
+
+        @include respond(tab-land) {
+            padding: 0;
+            height: 160rem;
+        }
+
+        @include respond(tab-port) {
+            grid-template-rows: repeat(25, 1fr);
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 30px;
+            height: 40rem;
+        }
+
+        @include respond(mobile-port) {
+            grid-template-rows: repeat(30, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 20px;
+            padding-top: 10rem;
+        }
         
     }
 
@@ -117,21 +218,61 @@
         &.square {
             grid-row: span 2;
             grid-column: span 2;
+
+            @include respond(desktop-2-port) {
+                grid-row: span 10;
+                grid-column: span 5;
+            }
+
+            @include respond(mobile-port) {
+                grid-row: span 10;
+                grid-column: span 5;
+            }
         }
 
         &.large-square {
             grid-row: span 3;
             grid-column: span 3;
+
+            @include respond(desktop-2-port) {
+                grid-row: span 10;
+                grid-column: span 5;
+            }
+
+            @include respond(mobile-port) {
+                grid-row: span 10;
+                grid-column: span 5;
+            }
         }
 
         &.tall {
             grid-row: span 3;
             grid-column: span 2;
+
+            @include respond(desktop-2-port) {
+                grid-row: span 10;
+                grid-column: span 5;
+            }
+
+            @include respond(mobile-port) {
+                grid-row: span 10;
+                grid-column: span 5;
+            }
         }
 
         &.wide {
             grid-row: span 2;
             grid-column: span 3;
+
+            @include respond(desktop-2-port) {
+                grid-row: span 10;
+                grid-column: span 5;
+            }
+
+            @include respond(mobile-port) {
+                grid-row: span 10;
+                grid-column: span 5;
+            }
         }
     }
     .one {
@@ -184,6 +325,10 @@
         background-blend-mode: multiply;
         transition: all .3s ease-in-out;
 
+        @include respond(desktop-2-port) {
+            display: none;
+        }
+
         &:hover {
             background-color: transparent;
             transform: scale(1.1);
@@ -225,14 +370,24 @@
 .section-contact_us {
     position: relative;
     height: 80vh;
+
+
+    @include respond(desktop-2) {
+        height: 90vh;
+    }
+
+    @include respond(desktop-1) {
+        height: 110vh;
+    }
+
+    @include respond(mobile-land) {
+        height: 110vh;
+    }
+
+    @include respond(mobile-port) {
+        height: 90vh;
+    }
+
 }
 
-// .contact_us {
-//     // background-image: url(/public/images/campfire_contact_us.jpg);
-//     // background-size:auto;
-//     // border-radius: 3px;
-//     // box-shadow: 0 1.5 4 rem rgba($color-black, .2);
-
-//     // height: 50rem;
-// }
 
