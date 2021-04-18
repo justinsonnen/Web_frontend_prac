@@ -30,6 +30,7 @@
         height: 100%;
         background-image: linear-gradient(to bottom, rgba($color-primary-blue-light-2, .8), transparent);
     }
+
     // design properties for footer video
     &--footer {
         position: absolute;
@@ -39,6 +40,7 @@
         -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 100%);
         clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%);
     }
+
     &--footer::before {
         content: "";
         display: block;

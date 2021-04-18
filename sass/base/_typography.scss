@@ -12,37 +12,36 @@
         font-family: 'min-reg-ital', sans-serif;
         font-size: 7rem;
         letter-spacing: 1rem;
-    
+
         animation-name: moveInDown;
         animation-duration: 1s;
         animation-timing-function: ease-out;
 
-            // media queries for responsive layout
+        // media queries for responsive layout
+        @include respond(desktop-1) {
+            font-size: 8rem;
+            letter-spacing: .9rem;
+        }
 
-            @include respond(desktop-1) {
-                font-size: 8rem;
-                letter-spacing: .9rem;
-            }
+        @include respond(tab-land) {
+            font-size: 9rem;
+            letter-spacing: .9rem;
+        }
 
-            @include respond(tab-land) {
-                font-size: 9rem;
-                letter-spacing: .9rem;
-            }
+        @include respond(tab-port) {
+            font-size: 11rem;
+            letter-spacing: .8rem;
+        }
 
-            @include respond(tab-port) {
-                font-size: 11rem;
-                letter-spacing: .8rem;
-            }
+        @include respond(mobile-land) {
+            font-size: 12rem;
+        }
 
-            // @include respond(mobile-land) {
-            //     font-size: 12rem;
-            // }
-
-            @include respond(mobile-port) {
-                font-size: 11rem;
-            }
+        @include respond(mobile-port) {
+            font-size: 11rem;
+        }
     }
-    
+
     // Header support phrase
     &--sub {
         font-family: "min-glyph";
@@ -59,33 +58,33 @@
         animation-fill-mode: backwards;
 
 
-            // media queries for responsive layout
-            @include respond(desktop-1) {
-                font-size: 3.5rem;
-                margin-top: 2.5rem;
-            }
+        // media queries for responsive layout
+        @include respond(desktop-1) {
+            font-size: 3.5rem;
+            margin-top: 2.5rem;
+        }
 
-            @include respond(tab-land) {
-                font-size: 4rem;
-                letter-spacing: 5.5rem;
-            }
+        @include respond(tab-land) {
+            font-size: 4rem;
+            letter-spacing: 5.5rem;
+        }
 
-            @include respond(tab-port) {
-                font-size: 5rem;
-                letter-spacing: 6.2rem;
-            }
+        @include respond(tab-port) {
+            font-size: 5rem;
+            letter-spacing: 6.2rem;
+        }
 
-            // @include respond(mobile-land) {
-            //     font-size: 6rem;
-            //     letter-spacing: 6.3rem;
-            //     margin-top: 3rem;
-            // }
+        @include respond(mobile-land) {
+            font-size: 6rem;
+            letter-spacing: 6.3rem;
+            margin-top: 3rem;
+        }
 
-            @include respond(mobile-port) {
-                font-size: 5rem;
-                letter-spacing: 6rem;
-                margin-top: 4rem;
-            }
+        @include respond(mobile-port) {
+            font-size: 5rem;
+            letter-spacing: 6rem;
+            margin-top: 4rem;
+        }
     }
 
     // Accent "come visit" 
@@ -96,8 +95,8 @@
         font-size: 6rem;
         position: absolute;
         top: -4.5rem;
-        left:-3rem;
-        transform:rotate(-10deg);
+        left: -3rem;
+        transform: rotate(-10deg);
 
         animation-delay: 1s;
         animation-name: moveInLeft-accent;
@@ -105,103 +104,103 @@
         animation-timing-function: ease-out;
         animation-fill-mode: backwards;
 
-            // media queries for responsive layout
-            @include respond(desktop-2-port) {
-                color: $color-primary-orange;
-            }
+        // media queries for responsive layout
+        @include respond(desktop-2-port) {
+            color: $color-primary-orange;
+        }
 
-            @include respond(desktop-1) {
-                font-size: 8.5rem;
-                top: -7rem;
-                left: -7rem;
-            }
+        @include respond(desktop-1) {
+            font-size: 8.5rem;
+            top: -7rem;
+            left: -7rem;
+        }
 
-            @include respond(tab-land) {
-                color: $color-primary-orange;
-                font-size: 8rem;
-                top: -7rem;
-                left: -7rem;
-            }
+        @include respond(tab-land) {
+            color: $color-primary-orange;
+            font-size: 8rem;
+            top: -7rem;
+            left: -7rem;
+        }
 
-            @include respond(tab-port) {
-                font-size: 8.5rem;
-                left: -8rem;
-            }
+        @include respond(tab-port) {
+            font-size: 8.5rem;
+            left: -8rem;
+        }
 
-            // @include respond(mobile-land) {
-            //     font-size: 9rem;
-            //     top: -8rem;
-            //     left: -9.5rem;
-            // }
+        @include respond(mobile-land) {
+            font-size: 9rem;
+            top: -8rem;
+            left: -9.5rem;
+        }
 
-            @include respond(mobile-port) {
-                left: -8rem;
-                font-size: 9rem;
-                top: -8rem;
-            }
+        @include respond(mobile-port) {
+            left: -8rem;
+            font-size: 9rem;
+            top: -8rem;
+        }
     }
 }
 
 // Section headings
-.heading-secondary{
-padding: 15px 50px;
-font-family: "min-reg-ital";
-font-size: 4.5rem;
-display: inline-block;
-background-image: linear-gradient(to right,  $color-primary-blue-dark, $color-grey-dark-1);
--webkit-background-clip: text;
-background-clip: text;
-color: transparent;
-letter-spacing: .4rem;
-transition: all .2s ease-out;
+.heading-secondary {
+    padding: 15px 50px;
+    font-family: "min-reg-ital";
+    font-size: 4.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-blue-dark, $color-grey-dark-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: .4rem;
+    transition: all .2s ease-out;
 
 
-        // media queries for responsive layout
-        @include respond(desktop-4) {
-            padding-top: 6rem;
-        }
-        
-        @include respond(desktop-2) {
-            font-size: 6rem;
-            padding-top: 3rem;
-        }
+    // media queries for responsive layout
+    @include respond(desktop-4) {
+        padding-top: 6rem;
+    }
 
-        @include respond(desktop-2-port) {
-            font-size: 5rem;
-            padding-top: 20rem;
-        }
-    
-        @include respond(desktop-1) {
-            font-size: 8rem;
-            padding-top: 6rem;
-        }
-    
-        @include respond(tab-land) {
-            font-size: 8.5rem;
-            padding-top: 15rem;
-            letter-spacing: .2rem;
-            white-space: nowrap;
-        }
-    
-        @include respond(tab-port) {
-            padding-top: 25rem;
-        }
-    
-        @include respond(mobile-land) {
-            padding-top: 10rem;
-            font-size: 9rem;
-        }
-    
-        @include respond(mobile-port) {
-            padding-top: 28rem;
-            font-size: 10rem;
-            white-space: unset;
-        }
+    @include respond(desktop-2) {
+        font-size: 6rem;
+        padding-top: 3rem;
+    }
 
-&:hover {
-    transform: translateY(-3.2px) scale(1.01);
-    text-shadow: 0rem 0.5rem 1rem rgba($color-black, .25);
- }
+    @include respond(desktop-2-port) {
+        font-size: 5rem;
+        padding-top: 20rem;
+    }
+
+    @include respond(desktop-1) {
+        font-size: 8rem;
+        padding-top: 6rem;
+    }
+
+    @include respond(tab-land) {
+        font-size: 8.5rem;
+        padding-top: 15rem;
+        letter-spacing: .2rem;
+        white-space: nowrap;
+    }
+
+    @include respond(tab-port) {
+        padding-top: 25rem;
+    }
+
+    @include respond(mobile-land) {
+        padding-top: 10rem;
+        font-size: 9rem;
+    }
+
+    @include respond(mobile-port) {
+        padding-top: 28rem;
+        font-size: 10rem;
+        white-space: unset;
+    }
+
+    &:hover {
+        transform: translateY(-3.2px) scale(1.01);
+        text-shadow: 0rem 0.5rem 1rem rgba($color-black, .25);
+    }
 }
 
 // Text box primary headings
@@ -210,7 +209,7 @@ transition: all .2s ease-out;
     font-family: ''min-glyph', sans-serif';
     letter-spacing: .3rem;
     color: $color-primary-blue-dark;
-    
+
 
     // media queries for responsive layout
     @include respond(desktop-4) {
@@ -246,11 +245,6 @@ transition: all .2s ease-out;
         font-size: 5.4rem;
     }
 
-    // @include respond(mobile-land) {
-    //     padding-top: 5rem;
-    //     font-size: 5.9rem;
-    // }
-
     @include respond(mobile-port) {
         padding-top: 2rem;
         font-size: 5rem;
@@ -269,25 +263,25 @@ transition: all .2s ease-out;
         @include respond(desktop-1) {
             margin-top: -14px;
         }
-    
+
         @include respond(tab-land) {
             margin-top: -10px;
         }
-    
+
         @include respond(tab-port) {
             margin-top: -9.5px;
-           font-size: 5.5rem;
+            font-size: 5.5rem;
         }
-    
+
         @include respond(mobile-land) {
             font-size: 5rem;
         }
-    
+
         @include respond(mobile-port) {
-           margin-top: -7px;
-           font-size: 5.5rem;
+            margin-top: -7px;
+            font-size: 5.5rem;
         }
-        
+
     }
 }
 
@@ -298,44 +292,38 @@ transition: all .2s ease-out;
     text-transform: lowercase;
     font-family: "min-reg";
     line-height: 1.8;
-    
 
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-bottom: 2.5rem;
     }
 
+    // media queries for responsive layout
+    @include respond(desktop-4) {
+        font-size: 2.3rem;
+    }
 
-            // media queries for responsive layout
-            @include respond(desktop-4) {
-                font-size: 2.3rem;
-            }
+    @include respond(desktop-2) {
+        font-size: 2rem;
+    }
 
-            @include respond(desktop-2) {
-                font-size: 2rem;
-            }
+    @include respond(desktop-2-port) {
+        font-size: 2.45rem;
+    }
 
-            @include respond(desktop-2-port) {
-                font-size: 2.45rem;
-            }
-        
-            @include respond(desktop-1) {
-                font-size: 2.7rem;
-            }
-        
-            @include respond(tab-land) {
-                font-size: 3rem;
-            }
-        
-            @include respond(tab-port) {
-                font-size: 4rem;
-                line-height: 2;
-            }
-        
-            // @include respond(mobile-land) {
-            //     font-size: 4.2rem;
-            // }
-        
-            @include respond(mobile-port) {
-                font-size: 4rem;
-            }
+    @include respond(desktop-1) {
+        font-size: 2.7rem;
+    }
+
+    @include respond(tab-land) {
+        font-size: 3rem;
+    }
+
+    @include respond(tab-port) {
+        font-size: 4rem;
+        line-height: 2;
+    }
+
+    @include respond(mobile-port) {
+        font-size: 4rem;
+    }
 }

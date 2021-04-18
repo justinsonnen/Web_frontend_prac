@@ -8,9 +8,11 @@ change box model to remove any padding or borders */
     box-sizing: inherit;
 }
 
-//determines what 1rem is
 html {
-    font-size: 62.5%;                           // 1 rem = 10px;  10px/16px = 62.5%
+
+
+    // determines what 1rem is:  1 rem = 10px;  10px/16px = 62.5%
+    font-size: 62.5%;
 
     // 2400px - 2700px
     @include respond(desktop-3) {
@@ -47,9 +49,9 @@ html {
     }
 
     // 410px and under
-    @include respond(mobile-port){
+    @include respond(mobile-port) {
         font-size: 17%;
-    }   
+    }
 
     // 2700px+
     @include respond(desktop-4) {
