@@ -4,7 +4,7 @@
 
 
 ## Overview
-This project, Driftwoodpines.com, is a landing page for a mock outdoor recreation vacation home rental company.  
+This project, Driftwoodpines.com, is a landing page for a mock outdoor recreation, vacation home rental company.  
 The purpose of this site was to gain experience with front end development tools and industry standard design principals.  
 
 ## Usage
@@ -12,9 +12,6 @@ The purpose of this site was to gain experience with front end development tools
 Navigate to https://www.driftwoodpines.com
 
 ## Discussion
-
-This project, Driftwoodpines.com, is a landing page for a mock outdoor recreation, vacation home rental company.  
-The purpose of this site was to gain experience with front end web development tools and industry standard design principals.
 
 The tools used to build this site are HTML and SCSS. For this project I used VScode and pushed my commits to github.  This site was then uploaded to HostGators via Cpanel where it is being hosted.
 
