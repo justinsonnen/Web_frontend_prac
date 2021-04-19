@@ -29,15 +29,8 @@ I optimized all images to reduce file size while maintaining visual integrity.  
 
 The current degree of completion is enough to satisfy my initial goal, however, there is a lot of updates I plan to make to this site in the future.  Currently, all animations are managed by SCSS.  This site does not have a navigation menu.  This is because I have not implemented any JavaScript, but plan to in the near future.  I would like to add a backend to this site, a database, and connect to an api. I would also like to add some logic that could provide a service or solve some problem.  These are all skills I plan to improve upon progressively. 
 
-I did have one issue when making this site responsive, and that is, when I view this site on a mobile apple device it does not size/respond correctly.  When using the chrome developer tools to test all nine screen sizes my code renders perfectly.  I have added appropriate webkit prefixes and accounted for retina displays but have not yet discovered the fault.  This will take some time to debug.  In the future I plan to build mobile first, then increase progressively to desktop.  Front end development being new to me I was too far along before i learned of the benefits of mobile first.
+I did have one issue when making this site responsive, and that is, when I view this site on a mobile apple device it does not size/respond correctly.  When using the chrome developer tools to test all nine screen sizes my code renders perfectly.  I have added appropriate webkit prefixes and accounted for retina displays but have not yet discovered the fault.  This will take some time to debug.  In the future I plan to build mobile first, then increase progressively to desktop.  I am new to front end development and was just too far along before i learned of the benefits of mobile first development.
 
 I utilized many resources to learn how to build this site:
 
-
-Udemy tutorials
-Stackoverflow
-favicon.cc
-color hunt
-daily UI
-youtube
-google fonts
+Udemy tutorials, Stackoverflow, favicon.cc, color hunt, daily UI, youtube, google fonts
